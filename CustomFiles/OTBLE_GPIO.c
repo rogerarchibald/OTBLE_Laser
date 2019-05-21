@@ -16,9 +16,10 @@ Will run the GPIO from here, including running LED's and test point/interrupt fr
 
 
 //initialize the RGB LED as outputs
-void initRGB(void){
+void initIO(void){
     nrf_gpio_range_cfg_output(22,24); //config the RGB LED as outputs
-setRGB(green);
+    nrf_gpio_cfg_output(TP1);
+    nrf_gpio_cfg_output(TP2);
    nrf_gpio_pin_set(vlShutDwn);
     nrf_gpio_cfg_output(vlShutDwn);
       
@@ -34,3 +35,30 @@ nrf_gpio_cfg(intPin,NRF_GPIO_PIN_DIR_INPUT , NRF_GPIO_PIN_INPUT_CONNECT , NRF_GP
   nrf_gpio_port_out_clear(NRF_P0,newColor); //turn on the LED's as defined in newColor
 
   }
+
+
+
+//Test Point Function Implementations:
+void togTP1(void){
+nrf_gpio_pin_toggle(TP1);
+}
+
+void togTP2(void){
+nrf_gpio_pin_toggle(TP2);
+}
+
+void setTP1(void){
+nrf_gpio_pin_set(TP1);
+}
+
+void setTP2(void){
+nrf_gpio_pin_set(TP2);
+}
+
+void clearTP1(void){
+nrf_gpio_pin_clear(TP1);
+}
+
+void clearTP2(void){
+nrf_gpio_pin_clear(TP2);
+}

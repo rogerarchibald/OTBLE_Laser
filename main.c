@@ -73,6 +73,7 @@
 #include "peer_manager_handler.h"
 #include "sensorsim.h"
 #include "ble_conn_state.h"
+#include "nrf_drv_saadc.h"
 #include "nrf_ble_gatt.h"
 #include "nrf_ble_qwr.h"
 #include "nrf_pwr_mgmt.h"
@@ -111,6 +112,19 @@
 #define SEC_PARAM_MAX_KEY_SIZE          16                                      /**< Maximum encryption key size. */
 
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
+
+
+#define BATTERY_TIMER_INTERVAL  APP_TIMER_TICKS(500) //WILL CHECK BATT EVERY 500mS
+
+
+//storage buffer for ADC results
+#define SAMPLES_IN_BUFFER 5
+static nrf_saadc_value_t     m_buffer[SAMPLES_IN_BUFFER];
+
+
+
+//create instances of the app timer:
+APP_TIMER_DEF(m_battery_timer_id);
 
 
 NRF_BLE_GATT_DEF(m_gatt);                                                       /**< GATT module instance. */
@@ -169,6 +183,75 @@ static void pm_evt_handler(pm_evt_t const * p_evt)
             break;
     }
 }
+//ADC Stuff:
+//here will average the ADC readings and, if the readings are different from a previous reading (+/- tolerance) will update hte characteristic value.
+void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
+{
+volatile static uint16_t lastValue = 0;
+ uint16_t thisValue = 0;
+    if (p_event->type == NRF_DRV_SAADC_EVT_DONE)
+    {
+        ret_code_t err_code;
+        
+        err_code = nrf_drv_saadc_buffer_convert(p_event->data.done.p_buffer, SAMPLES_IN_BUFFER);
+        APP_ERROR_CHECK(err_code);
+
+        int i;
+    
+
+        for (i = 0; i < SAMPLES_IN_BUFFER; i++)
+        {
+           thisValue += p_event->data.done.p_buffer[i];
+        }
+        thisValue = (thisValue/SAMPLES_IN_BUFFER); //average the readings
+        if((thisValue > (lastValue +5)) || (thisValue < (lastValue -5))){
+        //TODO: This means we're out of tolerance, call function to update BLE value of battery
+          opentrap_characteristic_update(&m_opentrap_service, &thisValue, 0);
+       }
+       lastValue = thisValue; //update for next time.
+    }
+}
+
+
+void saadc_init(void)
+{
+    ret_code_t err_code;
+    nrf_saadc_channel_config_t channel_config =
+        NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN0);
+    channel_config.gain = NRF_SAADC_GAIN1; //set gain to 1 since my input divider scales the battery range to match the ADC range.
+    err_code = nrf_drv_saadc_init(NULL, saadc_callback);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = nrf_drv_saadc_channel_init(0, &channel_config);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = nrf_drv_saadc_buffer_convert(m_buffer, SAMPLES_IN_BUFFER);
+    APP_ERROR_CHECK(err_code);
+
+}
+
+
+
+
+
+//When the device is in a connection, the battery app timer will roll over every 500mS and call this function to start the battery read
+static void batt_timer_timeout_handler(void *p_context){
+//will trigger an ADC sample from here every timer rollover (500mS).  In the ADC event handler will average the two readings and send them off if they're substantially different from last value
+  static uint16_t dummyVar = 0;
+  dummyVar ++;
+
+  nrf_drv_saadc_sample(); //Trigger the SAADC SAMPLE task
+
+  NRF_LOG_INFO("At the app timer handler");
+  //TODO: Following lines updating characteristics are just a sanity check...need to implement ADC and rangefinder.
+
+    togTP1();
+    
+    // nrf_saadc_task_trigger(NRF_SAADC_TASK_SAMPLE);
+}
+
+
+
 
 
 /**@brief Function for the Timer initialization.
@@ -180,7 +263,9 @@ static void timers_init(void)
     // Initialize timer module.
     ret_code_t err_code = app_timer_init();
     APP_ERROR_CHECK(err_code);
-
+ //   err_code = app_timer_create(&m_app_timer_id, APP_TIMER_MODE_REPEATED, timer_timeout_handler);
+    err_code = app_timer_create(&m_battery_timer_id, APP_TIMER_MODE_REPEATED, batt_timer_timeout_handler);
+    APP_ERROR_CHECK(err_code);
     // Create timers.
 
     /* YOUR_JOB: Create any timers to be used by the application.
@@ -347,16 +432,7 @@ static void conn_params_init(void)
 }
 
 
-/**@brief Function for starting timers.
- */
-static void application_timers_start(void)
-{
-    /* YOUR_JOB: Start your timers. below is an example of how to start a timer.
-       ret_code_t err_code;
-       err_code = app_timer_start(m_app_timer_id, TIMER_INTERVAL, NULL);
-       APP_ERROR_CHECK(err_code); */
 
-}
 
 
 /**@brief Function for putting the chip into sleep mode.
@@ -415,15 +491,18 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
     {
         case BLE_GAP_EVT_DISCONNECTED:
             NRF_LOG_INFO("Disconnected.");
-            setRGB(green);
+            app_timer_stop(m_battery_timer_id);
+            //TODO: Stop sampling rangefinder and put it to sleep
             // LED indication will be changed when advertising starts.
             break;
 
         case BLE_GAP_EVT_CONNECTED:
             NRF_LOG_INFO("Connected.");
             setRGB(blue); //blue to indicate connection
-            m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
-            err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_conn_handle);
+            app_timer_start(m_battery_timer_id, BATTERY_TIMER_INTERVAL, NULL);  //START THE BATTERY TIMER WHEN CONNECTED.
+            //TODO: start sampling rangefinder.
+            m_opentrap_service.conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
+            err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_opentrap_service.conn_handle);
             APP_ERROR_CHECK(err_code);
             break;
 
@@ -627,9 +706,10 @@ int main(void)
 
     // Initialize.
     log_init();
-    initRGB();  //call function to initialize hte RGB LED and other I/O.
+    initIO();  //call function to initialize hte RGB LED and other I/O.
     timers_init();
     power_management_init();
+    saadc_init();
     ble_stack_init();
     gap_params_init();
     gatt_init();
@@ -637,10 +717,8 @@ int main(void)
     advertising_init();
     conn_params_init();
     peer_manager_init();
-
     // Start execution.
     NRF_LOG_INFO("Template example started.");
-    application_timers_start();
 
     advertising_start(erase_bonds);
 

@@ -42,6 +42,7 @@
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_prs.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uart.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uarte.o"
+"Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_saadc.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/bsp.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/main.o"

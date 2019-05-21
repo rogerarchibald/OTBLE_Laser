@@ -78,11 +78,8 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/main.o: \
  ../../../../../../components/libraries/sensorsim/sensorsim.h \
  ../../../../../../components/ble/common/ble_conn_state.h \
  ../../../../../../components/libraries/atomic/nrf_atomic.h \
- ../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h \
- ../../../../../../components/ble/nrf_ble_qwr/nrf_ble_qwr.h \
- ../../../../../../components/libraries/pwr_mgmt/nrf_pwr_mgmt.h \
- ../../../CustomFiles/OpenTrap.h ../../../CustomFiles/OTBLE_GPIO.h \
- ../../../../../../modules/nrfx/hal/nrf_gpio.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_saadc.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_saadc.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \
@@ -96,6 +93,12 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/main.o: \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
+ ../../../../../../modules/nrfx/hal/nrf_saadc.h \
+ ../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h \
+ ../../../../../../components/ble/nrf_ble_qwr/nrf_ble_qwr.h \
+ ../../../../../../components/libraries/pwr_mgmt/nrf_pwr_mgmt.h \
+ ../../../CustomFiles/OpenTrap.h ../../../CustomFiles/OTBLE_GPIO.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpio.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../../../components/libraries/strerror/nrf_strerror.h \
