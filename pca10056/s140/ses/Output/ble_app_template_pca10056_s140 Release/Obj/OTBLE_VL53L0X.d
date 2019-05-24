@@ -49,9 +49,20 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/OTBLE_VL53L0X.o: \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_api.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_api_strings.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_def.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_device.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/platform/inc/vl53l0x_types.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/platform/inc/vl53l0x_platform.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_def.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/platform/inc/vl53l0x_platform_log.h \
+ /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.16/include/string.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/platform/inc/vl53l0x_i2c_platform.h \
+ /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.16/include/stdarg.h \
+ ../../../CustomFiles/nrf51-vl53l0x-driver/platform/inc/vl53l0x_i2c_platform.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/util/sdk_common.h \
- /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.16/include/string.h \
  ../../../../../../components/libraries/util/sdk_os.h \
  ../../../../../../components/libraries/util/app_util.h \
  ../../../../../../components/libraries/util/sdk_macros.h \

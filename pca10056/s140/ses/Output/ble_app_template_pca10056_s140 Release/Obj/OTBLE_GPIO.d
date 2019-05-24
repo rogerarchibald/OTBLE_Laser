@@ -48,4 +48,23 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/OTBLE_GPIO.o: \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
- ../../../../../../modules/nrfx/drivers/nrfx_errors.h
+ ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
+ /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/examples/ble_peripheral/OTBLE_Laser/CustomFiles/OpenTrap.h \
+ ../../../../../../components/softdevice/s140/headers/ble.h \
+ ../../../../../../components/softdevice/s140/headers/ble_err.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_hci.h \
+ ../../../../../../components/softdevice/s140/headers/ble_ranges.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_l2cap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
+ ../../../../../../components/ble/common/ble_srv_common.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_gpiote.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpiote.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpio.h

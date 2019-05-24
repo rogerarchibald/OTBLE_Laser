@@ -11,8 +11,8 @@ Starting to build the OpenTrap firmware using the BLE-Characteristics Tutorial a
 #include "nrf_gpio.h"
 #include "OpenTrap.h"
 #include "ble_srv_common.h"
-//#include "app_error.h"
-//#include "openTrapGPIO.h"
+#include "app_error.h"
+#include "OTBLE_GPIO.h"
 
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"

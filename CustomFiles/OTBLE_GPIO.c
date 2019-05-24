@@ -9,7 +9,8 @@ Will run the GPIO from here, including running LED's and test point/interrupt fr
 
 
 #include "OTBLE_GPIO.h"
-
+#include "OpenTrap.h"
+#include "nrf_drv_gpiote.h"
 
 
 
@@ -17,13 +18,24 @@ Will run the GPIO from here, including running LED's and test point/interrupt fr
 
 //initialize the RGB LED as outputs
 void initIO(void){
+    ret_code_t err_code;
     nrf_gpio_range_cfg_output(22,24); //config the RGB LED as outputs
     nrf_gpio_cfg_output(TP1);
     nrf_gpio_cfg_output(TP2);
    nrf_gpio_pin_set(vlShutDwn);
     nrf_gpio_cfg_output(vlShutDwn);
-      
-nrf_gpio_cfg(intPin,NRF_GPIO_PIN_DIR_INPUT , NRF_GPIO_PIN_INPUT_CONNECT , NRF_GPIO_PIN_PULLUP , NRF_GPIO_PIN_S0S1, NRF_GPIO_PIN_NOSENSE );
+      //starting setting up IOC for interrupt pin (intPin defined in OTBLE_GPIO.h)
+    err_code = nrf_drv_gpiote_init();
+    APP_ERROR_CHECK(err_code);
+
+
+    nrf_drv_gpiote_in_config_t in_config = GPIOTE_CONFIG_IN_SENSE_HITOLO(true);
+    in_config.pull = NRF_GPIO_PIN_PULLUP;
+
+    err_code = nrf_drv_gpiote_in_init(intPin, &in_config, in_pin_handler);
+    APP_ERROR_CHECK(err_code);
+
+    nrf_drv_gpiote_in_event_enable(intPin, true);
 
    }
 

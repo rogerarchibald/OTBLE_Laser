@@ -64,6 +64,12 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/OpenTrap.o: \
  ../../../../../../components/softdevice/s140/headers/ble_types.h \
  ../../../../../../components/softdevice/s140/headers/ble_gap.h \
  ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_gpiote.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpiote.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpio.h \
+ ../../../../../../components/libraries/util/app_error.h \
+ /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/examples/ble_peripheral/OTBLE_Laser/CustomFiles/OTBLE_GPIO.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/util/sdk_common.h \
  ../../../../../../components/libraries/util/sdk_os.h \

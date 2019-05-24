@@ -3928,13 +3928,13 @@
 // <e> NRFX_TWIM_ENABLED - nrfx_twim - TWIM peripheral driver
 //==========================================================
 #ifndef NRFX_TWIM_ENABLED
-#define NRFX_TWIM_ENABLED 0
+#define NRFX_TWIM_ENABLED 1
 #endif
 // <q> NRFX_TWIM0_ENABLED  - Enable TWIM0 instance
  
 
 #ifndef NRFX_TWIM0_ENABLED
-#define NRFX_TWIM0_ENABLED 0
+#define NRFX_TWIM0_ENABLED 1
 #endif
 
 // <q> NRFX_TWIM1_ENABLED  - Enable TWIM1 instance
@@ -4167,13 +4167,13 @@
 // <e> NRFX_TWI_ENABLED - nrfx_twi - TWI peripheral driver
 //==========================================================
 #ifndef NRFX_TWI_ENABLED
-#define NRFX_TWI_ENABLED 0
+#define NRFX_TWI_ENABLED 1
 #endif
 // <q> NRFX_TWI0_ENABLED  - Enable TWI0 instance
  
 
 #ifndef NRFX_TWI0_ENABLED
-#define NRFX_TWI0_ENABLED 0
+#define NRFX_TWI0_ENABLED 1
 #endif
 
 // <q> NRFX_TWI1_ENABLED  - Enable TWI1 instance
@@ -4190,7 +4190,7 @@
 // <104857600=> 400k 
 
 #ifndef NRFX_TWI_DEFAULT_CONFIG_FREQUENCY
-#define NRFX_TWI_DEFAULT_CONFIG_FREQUENCY 26738688
+#define NRFX_TWI_DEFAULT_CONFIG_FREQUENCY 104857600
 #endif
 
 // <q> NRFX_TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT  - Enables bus holding after uninit
@@ -5603,7 +5603,7 @@
 // <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer
 //==========================================================
 #ifndef TWI_ENABLED
-#define TWI_ENABLED 0
+#define TWI_ENABLED 1
 #endif
 // <o> TWI_DEFAULT_CONFIG_FREQUENCY  - Frequency
  
@@ -5612,7 +5612,7 @@
 // <104857600=> 400k 
 
 #ifndef TWI_DEFAULT_CONFIG_FREQUENCY
-#define TWI_DEFAULT_CONFIG_FREQUENCY 26738688
+#define TWI_DEFAULT_CONFIG_FREQUENCY 104857600
 #endif
 
 // <q> TWI_DEFAULT_CONFIG_CLR_BUS_INIT  - Enables bus clearing procedure during init
@@ -5649,7 +5649,7 @@
 // <e> TWI0_ENABLED - Enable TWI0 instance
 //==========================================================
 #ifndef TWI0_ENABLED
-#define TWI0_ENABLED 0
+#define TWI0_ENABLED 1
 #endif
 // <q> TWI0_USE_EASY_DMA  - Use EasyDMA (if present)
  

@@ -56,9 +56,11 @@
 #include <string.h>
 
 #include "nordic_common.h"
+#include "nrf_drv_gpiote.h"
 #include "nrf.h"
 #include "app_error.h"
 #include "ble.h"
+#include "nrf_delay.h"
 #include "ble_hci.h"
 #include "ble_srv_common.h"
 #include "ble_advdata.h"
@@ -79,13 +81,21 @@
 #include "nrf_pwr_mgmt.h"
 #include "OpenTrap.h"
 #include "OTBLE_GPIO.h"
+#include "OTBLE_VL53L0x.h"
 
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
+//starting to bring in vl53 library stuffs
+#include "OTBLE_VL53L0X.h"
+#include "vl53l0x_api.h"
+#include "vl53l0x_platform.h"
+#include "vl53l0x_i2c_platform.h"
 
-#define DEVICE_NAME                     "OpenTrap"                       /**< Name of device. Will be included in the advertising data. */
+
+
+#define DEVICE_NAME                     "OpenTRAP"                       /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME               "NordicSemiconductor"                   /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                300                                     /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
 
@@ -121,7 +131,8 @@
 #define SAMPLES_IN_BUFFER 5
 static nrf_saadc_value_t     m_buffer[SAMPLES_IN_BUFFER];
 
-
+//range info from laser rangefinder
+extern   VL53L0X_RangingMeasurementData_t rangingData; //defined in OTBLE_VL53L0x.c
 
 //create instances of the app timer:
 APP_TIMER_DEF(m_battery_timer_id);
@@ -142,6 +153,33 @@ static ble_uuid_t m_adv_uuids[] =                                               
 //only one service which is the OpenTrap UUID, of type Vendor-defined...UUID defined in OpenTrap.h
         {BLE_UUID_OPENTRAP_SERVICE_UUID, BLE_UUID_TYPE_VENDOR_BEGIN}
         };
+
+
+//function defined here to act upon an interrupt from the VL53X saying that a conversion is complete.  
+void in_pin_handler(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
+{
+static uint16_t lastValue = 0;  //will store the last distance value recorded here to know if we've changed by more than our threshold
+uint16_t thisValue;
+//TODO: need to grab data when this occurs, the RGB setting is just a place-holder for now.
+getRangeClearFlag();
+
+if(rangingData.RangeStatus){ //status == 0 when all is well
+        NRF_LOG_INFO("Range info not good, status == %d\r\n", rangingData.RangeStatus);
+        setRGB(red);
+}else{
+thisValue = rangingData.RangeMilliMeter;
+NRF_LOG_INFO("Range in MM: %d\r\n", thisValue);
+if((thisValue > (lastValue + 8)) || (thisValue < (lastValue - 8))){
+    //This means we're out of tolerance, call function to update BLE value of Distance
+          opentrap_characteristic_update(&m_opentrap_service, &thisValue, 1);
+          lastValue = thisValue;
+
+}
+
+}
+
+}
+
 
 
 static void advertising_start(bool erase_bonds);
@@ -205,7 +243,7 @@ volatile static uint16_t lastValue = 0;
         }
         thisValue = (thisValue/SAMPLES_IN_BUFFER); //average the readings
         if((thisValue > (lastValue +5)) || (thisValue < (lastValue -5))){
-        //TODO: This means we're out of tolerance, call function to update BLE value of battery
+        //This means we're out of tolerance, call function to update BLE value of battery
           opentrap_characteristic_update(&m_opentrap_service, &thisValue, 0);
        }
        lastValue = thisValue; //update for next time.
@@ -290,7 +328,7 @@ static void gap_params_init(void)
     ble_gap_conn_sec_mode_t sec_mode;
 
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&sec_mode);
-
+ 
     err_code = sd_ble_gap_device_name_set(&sec_mode,
                                           (const uint8_t *)DEVICE_NAME,
                                           strlen(DEVICE_NAME));
@@ -391,9 +429,8 @@ static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
 {
     ret_code_t err_code;
 
-    if (p_evt->evt_type == BLE_CONN_PARAMS_EVT_FAILED)
-    {
-        err_code = sd_ble_gap_disconnect(m_conn_handle, BLE_HCI_CONN_INTERVAL_UNACCEPTABLE);
+    if (p_evt->evt_type == BLE_CONN_PARAMS_EVT_FAILED) {
+        err_code = sd_ble_gap_disconnect(m_opentrap_service.conn_handle, BLE_HCI_CONN_INTERVAL_UNACCEPTABLE);
         APP_ERROR_CHECK(err_code);
     }
 }
@@ -492,6 +529,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
         case BLE_GAP_EVT_DISCONNECTED:
             NRF_LOG_INFO("Disconnected.");
             app_timer_stop(m_battery_timer_id);
+                stopMeasuring(); //turn off the ultrasonic meaurements
             //TODO: Stop sampling rangefinder and put it to sleep
             // LED indication will be changed when advertising starts.
             break;
@@ -499,6 +537,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
         case BLE_GAP_EVT_CONNECTED:
             NRF_LOG_INFO("Connected.");
             setRGB(blue); //blue to indicate connection
+            startMeasuring(); //start taking range-finder measurements
             app_timer_start(m_battery_timer_id, BATTERY_TIMER_INTERVAL, NULL);  //START THE BATTERY TIMER WHEN CONNECTED.
             //TODO: start sampling rangefinder.
             m_opentrap_service.conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
@@ -684,6 +723,7 @@ static void idle_state_handle(void)
  */
 static void advertising_start(bool erase_bonds)
 {
+
     if (erase_bonds == true)
     {
         delete_bonds();
@@ -694,6 +734,7 @@ static void advertising_start(bool erase_bonds)
         ret_code_t err_code = ble_advertising_start(&m_advertising, BLE_ADV_MODE_FAST);
 
         APP_ERROR_CHECK(err_code);
+
     }
 }
 
@@ -702,7 +743,7 @@ static void advertising_start(bool erase_bonds)
  */
 int main(void)
 {
-    bool erase_bonds;
+    bool erase_bonds = false;
 
     // Initialize.
     log_init();
@@ -718,10 +759,9 @@ int main(void)
     conn_params_init();
     peer_manager_init();
     // Start execution.
-    NRF_LOG_INFO("Template example started.");
-
+    NRF_LOG_INFO("OpenTrapLaser Started!.");
+    initVL53();
     advertising_start(erase_bonds);
-
     // Enter main loop.
     for (;;)
     {

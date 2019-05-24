@@ -6,6 +6,7 @@
 //#include "Timers_OTBLE.h"
 #include "ble.h"
 #include "ble_srv_common.h"
+#include "nrf_drv_gpiote.h"
 
 // FROM_SERVICE_TUTORIAL: Defining 16-bit service and 128-bit base UUIDs
 #define BLE_UUID_OPENTRAP_BASE_UUID              {{0x53, 0xC1, 0x83, 0x54, 0x5F, 0x78, 0x23, 0x15, 0xDE, 0xEF, 0x58, 0x92, 0x00, 0x00, 0x55, 0xAA}} // 128-bit base UUID
@@ -15,6 +16,10 @@
 #define BLE_UUID_DIST_CHARACTERISTC_UUID          0xD1D1 // Just a random, but recognizable value
 #define BLE_UUID_BATT_CHARACTERISTC_UUID          0xBABA // Just a random, but recognizable value
 #define BLE_UUID_CNTRL_CHARACTERISTC_UUID         0xBEEF // Just a random, but recognizable value
+
+
+//prototype function for the gpiote event handler...putting it here since this is included for both the I/O and main files, it's a sensible place.  Actual function in main.c.
+void in_pin_handler(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action);
 
 // This structure contains various status information for our service. 
 // The name is based on the naming convention used in Nordics SDKs. 
