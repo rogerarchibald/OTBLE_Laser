@@ -144,6 +144,8 @@ BLE_ADVERTISING_DEF(m_advertising);                                             
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
 
+uint8_t connectionStatus = 0; //use this as a flag in my in_pin_handler to know if we're currently connected or not so I don't turn the RGB back to blue after a connection is finished.
+
 //declare an opentrap service:
 ble_ot_t m_opentrap_service;
 
@@ -160,18 +162,23 @@ void in_pin_handler(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 {
 static uint16_t lastValue = 0;  //will store the last distance value recorded here to know if we've changed by more than our threshold
 uint16_t thisValue;
-//TODO: need to grab data when this occurs, the RGB setting is just a place-holder for now.
+uint16_t valToSend;  //this is what will actually push for the characteristic value update....Need to set the MSBit of the 16-bit value as this is a flag to the app that we're looking at the laser version
+
 getRangeClearFlag();
 
 if(rangingData.RangeStatus){ //status == 0 when all is well
         NRF_LOG_INFO("Range info not good, status == %d\r\n", rangingData.RangeStatus);
-        setRGB(red);
+        setRGB(orange);
 }else{
+if(connectionStatus){
+ setRGB(blue); //we should be in a connection here so make sure it's reset to blue if it was previously set to orange due to an error with the rangefinder
+ }
 thisValue = rangingData.RangeMilliMeter;
 NRF_LOG_INFO("Range in MM: %d\r\n", thisValue);
 if((thisValue > (lastValue + 8)) || (thisValue < (lastValue - 8))){
     //This means we're out of tolerance, call function to update BLE value of Distance
-          opentrap_characteristic_update(&m_opentrap_service, &thisValue, 1);
+           valToSend = (thisValue | 0x8000);
+          opentrap_characteristic_update(&m_opentrap_service, &valToSend, 1);
           lastValue = thisValue;
 
 }
@@ -227,6 +234,8 @@ void saadc_callback(nrf_drv_saadc_evt_t const * p_event)
 {
 volatile static uint16_t lastValue = 0;
  uint16_t thisValue = 0;
+ 
+
     if (p_event->type == NRF_DRV_SAADC_EVT_DONE)
     {
         ret_code_t err_code;
@@ -281,11 +290,7 @@ static void batt_timer_timeout_handler(void *p_context){
   nrf_drv_saadc_sample(); //Trigger the SAADC SAMPLE task
 
   NRF_LOG_INFO("At the app timer handler");
-  //TODO: Following lines updating characteristics are just a sanity check...need to implement ADC and rangefinder.
 
-    togTP1();
-    
-    // nrf_saadc_task_trigger(NRF_SAADC_TASK_SAMPLE);
 }
 
 
@@ -529,20 +534,24 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
         case BLE_GAP_EVT_DISCONNECTED:
             NRF_LOG_INFO("Disconnected.");
             app_timer_stop(m_battery_timer_id);
-                stopMeasuring(); //turn off the ultrasonic meaurements
-            //TODO: Stop sampling rangefinder and put it to sleep
-            // LED indication will be changed when advertising starts.
+            stopMeasuring(); //turn off the laser rangefinder
+            connectionStatus = 0;
             break;
 
         case BLE_GAP_EVT_CONNECTED:
             NRF_LOG_INFO("Connected.");
+            connectionStatus = 1;
             setRGB(blue); //blue to indicate connection
             startMeasuring(); //start taking range-finder measurements
             app_timer_start(m_battery_timer_id, BATTERY_TIMER_INTERVAL, NULL);  //START THE BATTERY TIMER WHEN CONNECTED.
-            //TODO: start sampling rangefinder.
             m_opentrap_service.conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
             err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_opentrap_service.conn_handle);
             APP_ERROR_CHECK(err_code);
+            break;
+
+          //if the app is writing a characteristic value for setting trap or controlling LED.
+        case BLE_GATTS_EVT_WRITE:
+            rx_from_central(&m_opentrap_service, p_ble_evt);
             break;
 
         case BLE_GAP_EVT_PHY_UPDATE_REQUEST:
@@ -747,7 +756,9 @@ int main(void)
 
     // Initialize.
     log_init();
+    initVL53();
     initIO();  //call function to initialize hte RGB LED and other I/O.
+    PWM_INIT();
     timers_init();
     power_management_init();
     saadc_init();
@@ -760,7 +771,8 @@ int main(void)
     peer_manager_init();
     // Start execution.
     NRF_LOG_INFO("OpenTrapLaser Started!.");
-    initVL53();
+ 
+    nrf_delay_ms(300);  //give time for the rangefinder to finish initializing before trying to get data from it.
     advertising_start(erase_bonds);
     // Enter main loop.
     for (;;)

@@ -1,7 +1,5 @@
-Output/ble_app_template_pca10056_s140\ Release/Obj/OTBLE_GPIO.o: \
- /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/examples/ble_peripheral/OTBLE_Laser/CustomFiles/OTBLE_GPIO.c \
- /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/examples/ble_peripheral/OTBLE_Laser/CustomFiles/OTBLE_GPIO.h \
- ../../../../../../modules/nrfx/hal/nrf_gpio.h \
+Output/ble_app_template_pca10056_s140\ Release/Obj/nrfx_pwm.o: \
+ /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_pwm.c \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \
@@ -49,28 +47,10 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/OTBLE_GPIO.o: \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- /Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/examples/ble_peripheral/OTBLE_Laser/CustomFiles/OpenTrap.h \
- ../../../../../../components/softdevice/s140/headers/ble.h \
- ../../../../../../components/softdevice/s140/headers/ble_err.h \
- ../../../../../../components/softdevice/s140/headers/ble_gap.h \
- ../../../../../../components/softdevice/s140/headers/ble_hci.h \
- ../../../../../../components/softdevice/s140/headers/ble_ranges.h \
- ../../../../../../components/softdevice/s140/headers/ble_types.h \
- ../../../../../../components/softdevice/s140/headers/ble_l2cap.h \
- ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
- ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
- ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
- ../../../../../../components/ble/common/ble_srv_common.h \
- ../../../../../../components/softdevice/s140/headers/ble_types.h \
- ../../../../../../components/softdevice/s140/headers/ble_gap.h \
- ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
- ../../../../../../integration/nrfx/legacy/nrf_drv_gpiote.h \
- ../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h \
- ../../../../../../modules/nrfx/hal/nrf_gpiote.h \
- ../../../../../../modules/nrfx/hal/nrf_gpio.h \
- ../../../../../../integration/nrfx/legacy/nrf_drv_pwm.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_pwm.h \
  ../../../../../../modules/nrfx/hal/nrf_pwm.h \
+ ../../../../../../modules/nrfx/hal/nrf_gpio.h \
+ ../../../../../../integration/nrfx/nrfx_log.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/util/sdk_common.h \
  /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.16/include/string.h \
@@ -82,11 +62,4 @@ Output/ble_app_template_pca10056_s140\ Release/Obj/OTBLE_GPIO.o: \
  ../../../../../../components/libraries/log/src/nrf_log_internal.h \
  ../../../../../../components/libraries/log/nrf_log_instance.h \
  ../../../../../../components/libraries/log/nrf_log_types.h \
- ../../../../../../components/libraries/log/nrf_log_types.h \
- ../../../../../../components/libraries/log/nrf_log_ctrl.h \
- ../../../../../../components/libraries/log/src/nrf_log_ctrl_internal.h \
- ../../../../../../components/libraries/log/nrf_log_backend_interface.h \
- ../../../../../../components/libraries/memobj/nrf_memobj.h \
- /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 4.16/include/stdlib.h \
- ../../../../../../components/libraries/balloc/nrf_balloc.h \
- ../../../../../../components/libraries/log/nrf_log_default_backends.h
+ ../../../../../../components/libraries/log/nrf_log_types.h

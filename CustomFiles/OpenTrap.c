@@ -34,16 +34,16 @@ cmd = p_evt_write->data[0];
 	NRF_LOG_INFO("received: %d", cmd);
 	lightswitch = (cmd & 0x80);
 	if (lightswitch != lastlightstat){
-	//TODO:get GPIO online:	powerLED(lightswitch);
+	powerLED(lightswitch);
 	}
 	lastlightstat = lightswitch;	//MSBit of the command is the light switch
 //check the LSBit of command, this will be used to activate the PWM for solenoid	
         if(cmd & 0x01){
         if (lastlightstat){ //if we're about to drive the solenoid, turn off the LED for power consumption
         lastlightstat = 0; //set this off so that it will trigger on next change
-   //TODO: get GPIO online:      powerLED(0);
+        powerLED(0);
         }
-    //TODO: get GPIO online:        fireSolenoid();
+        fireSolenoid();
 
         }
 }
@@ -306,9 +306,9 @@ void opentrap_characteristic_update(ble_ot_t *p_opentrap_service, int16_t *newch
 
 }else if (whichChar == 1){
 	
-    // OUR_JOB: Step 3.E, Update characteristic value
+    //when whichChar = 1 it means the distance is the characteristic I need to update.
 	
-	
+                
 		uint16_t	len = 2;
 		ble_gatts_hvx_params_t hvx_params;
 		memset(&hvx_params, 0, sizeof(hvx_params));

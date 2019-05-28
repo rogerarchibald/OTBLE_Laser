@@ -47,6 +47,7 @@
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_twim.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_twis.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_twi.o"
+"Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_pwm.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/bsp.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o"
 "Output/ble_app_template_pca10056_s140 Release/Obj/main.o"
