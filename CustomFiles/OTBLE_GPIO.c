@@ -43,7 +43,7 @@ static nrf_drv_pwm_t m_pwm0 = NRF_DRV_PWM_INSTANCE(0);  //instance of
 void initIO(void){
     ret_code_t err_code;
     nrf_gpio_range_cfg_output(22,24); //config the RGB LED as outputs
-  //  nrf_gpio_cfg_output(TP1);
+    nrf_gpio_cfg_output(TP1);
     nrf_gpio_cfg_output(TP2);
    nrf_gpio_pin_set(vlShutDwn);
     nrf_gpio_cfg_output(vlShutDwn);
@@ -119,7 +119,7 @@ void PWM_INIT(void){
     {
        .output_pins =
         {
-            TP1,                              // channel 0
+            BST_DRV,                              // channel 0
             NRF_DRV_PWM_PIN_NOT_USED,             // channel 1
             NRF_DRV_PWM_PIN_NOT_USED,             // channel 2
             NRF_DRV_PWM_PIN_NOT_USED,             // channel 3

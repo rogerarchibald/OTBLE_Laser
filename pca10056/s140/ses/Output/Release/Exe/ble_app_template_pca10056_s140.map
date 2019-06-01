@@ -10514,7 +10514,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .init_rodata is too large to fit in FLASH memory segment)
                 0x00000000000263d4                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x00000000000263d4     0xbd60
+.text           0x00000000000263d4     0xbd64
                 0x00000000000263d4                __text_start__ = .
  *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x00000000000263d4        0x0 linker stubs
@@ -11079,908 +11079,908 @@ Linker script and memory map
                 0x000000000002afe8       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
  .text.nrf_gpio_pin_clear
                 0x000000000002b008       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
- .text.initIO   0x000000000002b028       0x88 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+ .text.initIO   0x000000000002b028       0x8c Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
                 0x000000000002b028                initIO
  .text.PWM_INIT
-                0x000000000002b0b0       0x4c Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
-                0x000000000002b0b0                PWM_INIT
+                0x000000000002b0b4       0x4c Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+                0x000000000002b0b4                PWM_INIT
  .text.fireSolenoid
-                0x000000000002b0fc       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
-                0x000000000002b0fc                fireSolenoid
- .text.setRGB   0x000000000002b160       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
-                0x000000000002b160                setRGB
+                0x000000000002b100       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+                0x000000000002b100                fireSolenoid
+ .text.setRGB   0x000000000002b164       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+                0x000000000002b164                setRGB
  .text.powerLED
-                0x000000000002b172        0xe Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
-                0x000000000002b172                powerLED
+                0x000000000002b176        0xe Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+                0x000000000002b176                powerLED
  .text.print_pal_error
-                0x000000000002b180       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
-                0x000000000002b180                print_pal_error
- *fill*         0x000000000002b192        0x2 
+                0x000000000002b184       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+                0x000000000002b184                print_pal_error
+ *fill*         0x000000000002b196        0x2 
  .text.startMeasuring
-                0x000000000002b194        0xc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
-                0x000000000002b194                startMeasuring
+                0x000000000002b198        0xc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+                0x000000000002b198                startMeasuring
  .text.stopMeasuring
-                0x000000000002b1a0        0xc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
-                0x000000000002b1a0                stopMeasuring
+                0x000000000002b1a4        0xc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+                0x000000000002b1a4                stopMeasuring
  .text.getRangeClearFlag
-                0x000000000002b1ac       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
-                0x000000000002b1ac                getRangeClearFlag
+                0x000000000002b1b0       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+                0x000000000002b1b0                getRangeClearFlag
  .text.initVL53
-                0x000000000002b1cc      0x194 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
-                0x000000000002b1cc                initVL53
+                0x000000000002b1d0      0x194 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+                0x000000000002b1d0                initVL53
  .text._GetAvailWriteSpace
-                0x000000000002b360       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+                0x000000000002b364       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
  .text._WriteNoCheck
-                0x000000000002b37c       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+                0x000000000002b380       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
  .text._WriteBlocking
-                0x000000000002b3b0       0x52 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
- *fill*         0x000000000002b402        0x2 
- .text._DoInit  0x000000000002b404       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+                0x000000000002b3b4       0x52 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+ *fill*         0x000000000002b406        0x2 
+ .text._DoInit  0x000000000002b408       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
  .text.SEGGER_RTT_WriteNoLock
-                0x000000000002b464       0x68 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
-                0x000000000002b464                SEGGER_RTT_WriteNoLock
+                0x000000000002b468       0x68 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+                0x000000000002b468                SEGGER_RTT_WriteNoLock
  .text.SEGGER_RTT_Init
-                0x000000000002b4cc        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
-                0x000000000002b4cc                SEGGER_RTT_Init
+                0x000000000002b4d0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+                0x000000000002b4d0                SEGGER_RTT_Init
  .text.sd_ble_gap_addr_get
-                0x000000000002b4d0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
- .text.sd_ble_gap_appearance_get
                 0x000000000002b4d4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
- .text.sd_ble_gap_device_name_get
+ .text.sd_ble_gap_appearance_get
                 0x000000000002b4d8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
- .text.sd_ble_uuid_encode
+ .text.sd_ble_gap_device_name_get
                 0x000000000002b4dc        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+ .text.sd_ble_uuid_encode
+                0x000000000002b4e0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
  .text.uuid_list_sized_encode
-                0x000000000002b4e0       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+                0x000000000002b4e4       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
  .text.uuid_list_encode
-                0x000000000002b584       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+                0x000000000002b588       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
  .text.ble_advdata_encode
-                0x000000000002b5b8      0x396 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
-                0x000000000002b5b8                ble_advdata_encode
+                0x000000000002b5bc      0x396 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+                0x000000000002b5bc                ble_advdata_encode
  .text.ble_advdata_search
-                0x000000000002b94e       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
-                0x000000000002b94e                ble_advdata_search
+                0x000000000002b952       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+                0x000000000002b952                ble_advdata_search
  .text.ble_advdata_parse
-                0x000000000002b986       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
-                0x000000000002b986                ble_advdata_parse
+                0x000000000002b98a       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+                0x000000000002b98a                ble_advdata_parse
  .text.sd_ble_gap_adv_set_configure
-                0x000000000002b9a6        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
- .text.sd_ble_gap_adv_start
                 0x000000000002b9aa        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+ .text.sd_ble_gap_adv_start
+                0x000000000002b9ae        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
  .text.flags_set
-                0x000000000002b9ae       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002b9b2       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
  .text.ble_advertising_conn_cfg_tag_set
-                0x000000000002b9da        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
-                0x000000000002b9da                ble_advertising_conn_cfg_tag_set
+                0x000000000002b9de        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002b9de                ble_advertising_conn_cfg_tag_set
  .text.ble_advertising_init
-                0x000000000002b9e0       0xee Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
-                0x000000000002b9e0                ble_advertising_init
+                0x000000000002b9e4       0xee Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002b9e4                ble_advertising_init
  .text.ble_advertising_start
-                0x000000000002bace      0x220 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
-                0x000000000002bace                ble_advertising_start
+                0x000000000002bad2      0x220 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002bad2                ble_advertising_start
  .text.ble_advertising_on_ble_evt
-                0x000000000002bcee       0x6a Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
-                0x000000000002bcee                ble_advertising_on_ble_evt
+                0x000000000002bcf2       0x6a Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002bcf2                ble_advertising_on_ble_evt
  .text.ble_advertising_on_sys_evt
-                0x000000000002bd58        0x2 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
-                0x000000000002bd58                ble_advertising_on_sys_evt
+                0x000000000002bd5c        0x2 Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+                0x000000000002bd5c                ble_advertising_on_sys_evt
  .text.sd_ble_gap_conn_param_update
-                0x000000000002bd5a        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.sd_ble_gap_disconnect
                 0x000000000002bd5e        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.sd_ble_gap_ppcp_set
-                0x000000000002bd62        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.sd_ble_gap_ppcp_get
-                0x000000000002bd66        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- *fill*         0x000000000002bd6a        0x2 
- .text.instance_get
-                0x000000000002bd6c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.send_error_evt
-                0x000000000002bd80       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.update_timeout_handler
-                0x000000000002bd90       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.conn_params_negotiation
-                0x000000000002bdfc       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.is_conn_params_ok.constprop.3
-                0x000000000002be44       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.ble_evt_handler
-                0x000000000002be78       0xe0 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .text.ble_conn_params_init
-                0x000000000002bf58       0x74 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
-                0x000000000002bf58                ble_conn_params_init
- .text.for_each_set_flag
-                0x000000000002bfcc       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
- .text.conn_handle_list_get
-                0x000000000002c000       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c000                conn_handle_list_get
- *fill*         0x000000000002c02e        0x2 
- .text.ble_evt_handler
-                0x000000000002c030       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
- .text.ble_conn_state_valid
-                0x000000000002c100       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c100                ble_conn_state_valid
- .text.ble_conn_state_role
-                0x000000000002c114       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c114                ble_conn_state_role
- .text.ble_conn_state_status
-                0x000000000002c134       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c134                ble_conn_state_status
- .text.ble_conn_state_encrypted
-                0x000000000002c154       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c154                ble_conn_state_encrypted
- .text.ble_conn_state_mitm_protected
-                0x000000000002c170       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c170                ble_conn_state_mitm_protected
- .text.ble_conn_state_user_flag_acquire
-                0x000000000002c18c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c18c                ble_conn_state_user_flag_acquire
- .text.ble_conn_state_user_flag_get
-                0x000000000002c1a0       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c1a0                ble_conn_state_user_flag_get
- .text.ble_conn_state_user_flag_set
-                0x000000000002c1d0       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c1d0                ble_conn_state_user_flag_set
- .text.ble_conn_state_for_each_set_user_flag
-                0x000000000002c20c       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
-                0x000000000002c20c                ble_conn_state_for_each_set_user_flag
- .text.ble_srv_is_notification_enabled
-                0x000000000002c23c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
-                0x000000000002c23c                ble_srv_is_notification_enabled
- .text.sd_ble_gattc_char_value_by_uuid_read
-                0x000000000002c244        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.service_changed_pending_flags_check
-                0x000000000002c248       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.car_update_pending_handle
-                0x000000000002c25c       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.evt_send
-                0x000000000002c290       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.send_unexpected_error
-                0x000000000002c2a6       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- *fill*         0x000000000002c2ce        0x2 
- .text.local_db_apply_in_evt
-                0x000000000002c2d0       0xb4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.apply_pending_handle
-                0x000000000002c384        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.sc_send_pending_handle
-                0x000000000002c388       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.car_update_needed
-                0x000000000002c458       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.update_pending_flags_check
-                0x000000000002c484       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.db_update_pending_handle
-                0x000000000002c4b8       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .text.gcm_im_evt_handler
-                0x000000000002c588       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x000000000002c588                gcm_im_evt_handler
- .text.gcm_pdb_evt_handler
-                0x000000000002c5c0       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x000000000002c5c0                gcm_pdb_evt_handler
- .text.gcm_init
-                0x000000000002c650       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x000000000002c650                gcm_init
- .text.store_car_value
-                0x000000000002c6e0       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x000000000002c6e0                store_car_value
- .text.gcm_ble_evt_handler
-                0x000000000002c744      0x138 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x000000000002c744                gcm_ble_evt_handler
- .text.sd_ble_gatts_service_changed
-                0x000000000002c87c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .text.sd_ble_gatts_sys_attr_set
-                0x000000000002c880        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .text.sd_ble_gatts_sys_attr_get
-                0x000000000002c884        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .text.sd_ble_gatts_initial_user_handle_get
-                0x000000000002c888        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .text.service_changed_pending_set
-                0x000000000002c88c       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .text.gscm_pdb_evt_handler
-                0x000000000002c8d4       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002c8d4                gscm_pdb_evt_handler
- .text.gscm_init
-                0x000000000002c8ec       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002c8ec                gscm_init
- .text.gscm_local_db_cache_update
-                0x000000000002c8fc       0xb8 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002c8fc                gscm_local_db_cache_update
- .text.gscm_local_db_cache_apply
-                0x000000000002c9b4       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002c9b4                gscm_local_db_cache_apply
- .text.gscm_service_changed_ind_needed
-                0x000000000002ca58       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002ca58                gscm_service_changed_ind_needed
- .text.gscm_service_changed_ind_send
-                0x000000000002ca7c       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002ca7c                gscm_service_changed_ind_send
- .text.gscm_db_change_notification_done
-                0x000000000002cad4       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x000000000002cad4                gscm_db_change_notification_done
- .text.sd_ecb_block_encrypt
-                0x000000000002caf8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
- .text.is_valid_irk
-                0x000000000002cafc       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cafc                is_valid_irk
- .text.addr_compare
-                0x000000000002cb12       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cb12                addr_compare
- .text.im_is_duplicate_bonding_data
-                0x000000000002cb3a       0x62 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cb3a                im_is_duplicate_bonding_data
- .text.im_find_duplicate_bonding_data
-                0x000000000002cb9c       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cb9c                im_find_duplicate_bonding_data
- .text.im_peer_id_get_by_conn_handle
-                0x000000000002cbd8       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cbd8                im_peer_id_get_by_conn_handle
- .text.im_ble_addr_get
-                0x000000000002cbfc       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cbfc                im_ble_addr_get
- .text.im_conn_handle_get
-                0x000000000002cc34       0x44 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cc34                im_conn_handle_get
- .text.im_master_id_is_valid
-                0x000000000002cc78       0x1a Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cc78                im_master_id_is_valid
- .text.im_master_ids_compare
-                0x000000000002cc92       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cc92                im_master_ids_compare
- .text.im_peer_id_get_by_master_id
-                0x000000000002ccba       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002ccba                im_peer_id_get_by_master_id
- *fill*         0x000000000002ccfa        0x2 
- .text.im_new_peer_id
-                0x000000000002ccfc       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002ccfc                im_new_peer_id
- .text.im_peer_free
-                0x000000000002cd10       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cd10                im_peer_free
- .text.ah       0x000000000002cd38       0x54 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cd38                ah
- .text.im_address_resolve
-                0x000000000002cd8c       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cd8c                im_address_resolve
- .text.im_ble_evt_handler
-                0x000000000002cdd4       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x000000000002cdd4                im_ble_evt_handler
- .text.sd_ble_gap_data_length_update
-                0x000000000002cea4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .text.sd_ble_gattc_exchange_mtu_request
-                0x000000000002cea8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .text.sd_ble_gatts_exchange_mtu_reply
-                0x000000000002ceac        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .text.data_length_update
-                0x000000000002ceb0       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .text.nrf_ble_gatt_init
-                0x000000000002cf30       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
-                0x000000000002cf30                nrf_ble_gatt_init
- *fill*         0x000000000002cf56        0x2 
- .text.nrf_ble_gatt_on_ble_evt
-                0x000000000002cf58      0x198 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
-                0x000000000002cf58                nrf_ble_gatt_on_ble_evt
- .text.sd_ble_gatts_rw_authorize_reply
-                0x000000000002d0f0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
- .text.sd_ble_user_mem_reply
-                0x000000000002d0f4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
- .text.user_mem_reply.part.0
-                0x000000000002d0f8       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
- .text.nrf_ble_qwr_init
-                0x000000000002d11c       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
-                0x000000000002d11c                nrf_ble_qwr_init
- .text.nrf_ble_qwr_conn_handle_assign
-                0x000000000002d140       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
-                0x000000000002d140                nrf_ble_qwr_conn_handle_assign
- .text.nrf_ble_qwr_on_ble_evt
-                0x000000000002d156       0xa0 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
-                0x000000000002d156                nrf_ble_qwr_on_ble_evt
- .text.peer_data_id_is_valid
-                0x000000000002d1f6       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- .text.peer_data_find
-                0x000000000002d206       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- *fill*         0x000000000002d236        0x2 
- .text.peer_data_delete_process
-                0x000000000002d238       0xb4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- .text.pds_evt_send
-                0x000000000002d2ec        0xa Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- *fill*         0x000000000002d2f6        0x2 
- .text.fds_evt_handler
-                0x000000000002d2f8       0xe8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- .text.pds_init
-                0x000000000002d3e0       0xa0 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d3e0                pds_init
- .text.pds_peer_data_read
-                0x000000000002d480       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d480                pds_peer_data_read
- .text.pds_peer_data_iterate_prepare
-                0x000000000002d4ec       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d4ec                pds_peer_data_iterate_prepare
- .text.pds_peer_data_iterate
-                0x000000000002d4fc       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d4fc                pds_peer_data_iterate
- .text.pds_peer_data_store
-                0x000000000002d558       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d558                pds_peer_data_store
- .text.pds_peer_id_allocate
-                0x000000000002d5fc        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d5fc                pds_peer_id_allocate
- .text.pds_peer_id_free
-                0x000000000002d604       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d604                pds_peer_id_free
- .text.pds_peer_id_is_allocated
-                0x000000000002d61a        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d61a                pds_peer_id_is_allocated
- .text.pds_next_peer_id_get
-                0x000000000002d61e        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d61e                pds_next_peer_id_get
- .text.pds_next_deleted_peer_id_get
-                0x000000000002d622        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x000000000002d622                pds_next_deleted_peer_id_get
- *fill*         0x000000000002d626        0x2 
- .text.write_buffer_record_find_next
-                0x000000000002d628       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .text.write_buffer_record_find
-                0x000000000002d650       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .text.pdb_evt_send
-                0x000000000002d682       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .text.write_buffer_record_release
-                0x000000000002d6a0       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .text.write_buf_store
-                0x000000000002d6e0       0xf4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002d6e0                write_buf_store
- .text.pdb_pds_evt_handler
-                0x000000000002d7d4      0x118 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002d7d4                pdb_pds_evt_handler
- .text.pdb_init
-                0x000000000002d8ec       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002d8ec                pdb_init
- .text.pdb_peer_data_ptr_get
-                0x000000000002d97c        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002d97c                pdb_peer_data_ptr_get
- *fill*         0x000000000002d982        0x2 
- .text.pdb_write_buf_get
-                0x000000000002d984       0xe4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002d984                pdb_write_buf_get
- .text.pdb_write_buf_release
-                0x000000000002da68       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002da68                pdb_write_buf_release
- .text.pdb_peer_free
-                0x000000000002da7c       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002da7c                pdb_peer_free
- .text.pdb_write_buf_store
-                0x000000000002db0c       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x000000000002db0c                pdb_write_buf_store
- .text.claim    0x000000000002db42       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
- .text.peer_id_init
-                0x000000000002db78       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002db78                peer_id_init
- .text.peer_id_allocate
-                0x000000000002db88        0xc Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002db88                peer_id_allocate
- .text.peer_id_delete
-                0x000000000002db94       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002db94                peer_id_delete
- .text.peer_id_free
-                0x000000000002dbb8       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dbb8                peer_id_free
- .text.peer_id_is_allocated
-                0x000000000002dbe0       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dbe0                peer_id_is_allocated
- .text.peer_id_is_deleted
-                0x000000000002dbf4       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dbf4                peer_id_is_deleted
- .text.next_id_get
-                0x000000000002dc08       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dc08                next_id_get
- *fill*         0x000000000002dc3a        0x2 
- .text.peer_id_get_next_used
-                0x000000000002dc3c       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dc3c                peer_id_get_next_used
- .text.peer_id_get_next_deleted
-                0x000000000002dc70        0xc Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
-                0x000000000002dc70                peer_id_get_next_deleted
- .text.evt_send
-                0x000000000002dc7c       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
- .text.ble_evt_handler
-                0x000000000002dca4       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
- .text.pm_sm_evt_handler
-                0x000000000002dcc8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dcc8                pm_sm_evt_handler
- .text.pm_gcm_evt_handler
-                0x000000000002dcd0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dcd0                pm_gcm_evt_handler
- .text.pm_im_evt_handler
-                0x000000000002dcd4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dcd4                pm_im_evt_handler
- .text.pm_init  0x000000000002dcd8      0x104 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dcd8                pm_init
- .text.pm_register
-                0x000000000002dddc       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dddc                pm_register
- .text.pm_sec_params_set
-                0x000000000002de0c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002de0c                pm_sec_params_set
- .text.pm_conn_secure
-                0x000000000002de20       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002de20                pm_conn_secure
- .text.pm_conn_sec_status_get
-                0x000000000002de3c       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002de3c                pm_conn_sec_status_get
- .text.pm_peer_delete
-                0x000000000002dea8       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dea8                pm_peer_delete
- .text.pm_peer_ranks_get
-                0x000000000002debc       0xf4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002debc                pm_peer_ranks_get
- .text.rank_vars_update
-                0x000000000002dfb0       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
- .text.pm_pdb_evt_handler
-                0x000000000002dfdc      0x138 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002dfdc                pm_pdb_evt_handler
- .text.pm_peer_rank_highest
-                0x000000000002e114      0x108 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x000000000002e114                pm_peer_rank_highest
  .text.sd_ble_gap_disconnect
-                0x000000000002e21c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
- .text._conn_secure
-                0x000000000002e220       0xc4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
- .text.pm_handler_flash_clean
-                0x000000000002e2e4      0x1b0 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
-                0x000000000002e2e4                pm_handler_flash_clean
- .text.pm_handler_flash_clean_on_return
-                0x000000000002e494       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
-                0x000000000002e494                pm_handler_flash_clean_on_return
- *fill*         0x000000000002e4b2        0x2 
- .text.pm_handler_pm_evt_log
-                0x000000000002e4b4      0x1e4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
-                0x000000000002e4b4                pm_handler_pm_evt_log
- .text.pm_handler_on_pm_evt
-                0x000000000002e698       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
-                0x000000000002e698                pm_handler_on_pm_evt
- .text.pm_buffer_init
-                0x000000000002e6e0       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
-                0x000000000002e6e0                pm_buffer_init
- .text.pm_buffer_ptr_get
-                0x000000000002e708       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
-                0x000000000002e708                pm_buffer_ptr_get
- .text.pm_buffer_release
-                0x000000000002e73a       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
-                0x000000000002e73a                pm_buffer_release
- .text.pm_buffer_block_acquire
-                0x000000000002e76a       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
-                0x000000000002e76a                pm_buffer_block_acquire
- .text.sd_ble_gap_authenticate
-                0x000000000002e7ce        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.sd_ble_gap_sec_params_reply
-                0x000000000002e7d2        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.sd_ble_gap_sec_info_reply
-                0x000000000002e7d6        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.flag_id_init
-                0x000000000002e7da       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002bd62        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.sd_ble_gap_ppcp_set
+                0x000000000002bd66        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.sd_ble_gap_ppcp_get
+                0x000000000002bd6a        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ *fill*         0x000000000002bd6e        0x2 
+ .text.instance_get
+                0x000000000002bd70       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.send_error_evt
+                0x000000000002bd84       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.update_timeout_handler
+                0x000000000002bd94       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.conn_params_negotiation
+                0x000000000002be00       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.is_conn_params_ok.constprop.3
+                0x000000000002be48       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.ble_evt_handler
+                0x000000000002be7c       0xe0 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .text.ble_conn_params_init
+                0x000000000002bf5c       0x74 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+                0x000000000002bf5c                ble_conn_params_init
+ .text.for_each_set_flag
+                0x000000000002bfd0       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+ .text.conn_handle_list_get
+                0x000000000002c004       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c004                conn_handle_list_get
+ *fill*         0x000000000002c032        0x2 
+ .text.ble_evt_handler
+                0x000000000002c034       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+ .text.ble_conn_state_valid
+                0x000000000002c104       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c104                ble_conn_state_valid
+ .text.ble_conn_state_role
+                0x000000000002c118       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c118                ble_conn_state_role
+ .text.ble_conn_state_status
+                0x000000000002c138       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c138                ble_conn_state_status
+ .text.ble_conn_state_encrypted
+                0x000000000002c158       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c158                ble_conn_state_encrypted
+ .text.ble_conn_state_mitm_protected
+                0x000000000002c174       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c174                ble_conn_state_mitm_protected
+ .text.ble_conn_state_user_flag_acquire
+                0x000000000002c190       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c190                ble_conn_state_user_flag_acquire
+ .text.ble_conn_state_user_flag_get
+                0x000000000002c1a4       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c1a4                ble_conn_state_user_flag_get
+ .text.ble_conn_state_user_flag_set
+                0x000000000002c1d4       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c1d4                ble_conn_state_user_flag_set
+ .text.ble_conn_state_for_each_set_user_flag
+                0x000000000002c210       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x000000000002c210                ble_conn_state_for_each_set_user_flag
+ .text.ble_srv_is_notification_enabled
+                0x000000000002c240        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
+                0x000000000002c240                ble_srv_is_notification_enabled
+ .text.sd_ble_gattc_char_value_by_uuid_read
+                0x000000000002c248        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.service_changed_pending_flags_check
+                0x000000000002c24c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.car_update_pending_handle
+                0x000000000002c260       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
  .text.evt_send
-                0x000000000002e7ec       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.send_config_req
-                0x000000000002e802       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002c294       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
  .text.send_unexpected_error
-                0x000000000002e826       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- *fill*         0x000000000002e84e        0x2 
- .text.conn_sec_failure
-                0x000000000002e850       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.pairing_success_evt_send
-                0x000000000002e898       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- *fill*         0x000000000002e8c6        0x2 
- .text.sec_proc_start.part.1
-                0x000000000002e8c8       0x50 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.link_secure_failure.part.2
-                0x000000000002e918       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .text.smd_init
-                0x000000000002e9a8       0x74 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
-                0x000000000002e9a8                smd_init
- .text.smd_params_reply
-                0x000000000002ea1c      0x14c Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
-                0x000000000002ea1c                smd_params_reply
- .text.smd_link_secure
-                0x000000000002eb68       0x2a Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
-                0x000000000002eb68                smd_link_secure
- *fill*         0x000000000002eb92        0x2 
- .text.smd_ble_evt_handler
-                0x000000000002eb94      0x350 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
-                0x000000000002eb94                smd_ble_evt_handler
- .text.sec_params_verify
-                0x000000000002eee4       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002c2aa       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ *fill*         0x000000000002c2d2        0x2 
+ .text.local_db_apply_in_evt
+                0x000000000002c2d4       0xb4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.apply_pending_handle
+                0x000000000002c388        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.sc_send_pending_handle
+                0x000000000002c38c       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.car_update_needed
+                0x000000000002c45c       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.update_pending_flags_check
+                0x000000000002c488       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.db_update_pending_handle
+                0x000000000002c4bc       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .text.gcm_im_evt_handler
+                0x000000000002c58c       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000002c58c                gcm_im_evt_handler
+ .text.gcm_pdb_evt_handler
+                0x000000000002c5c4       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000002c5c4                gcm_pdb_evt_handler
+ .text.gcm_init
+                0x000000000002c654       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000002c654                gcm_init
+ .text.store_car_value
+                0x000000000002c6e4       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000002c6e4                store_car_value
+ .text.gcm_ble_evt_handler
+                0x000000000002c748      0x138 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000002c748                gcm_ble_evt_handler
+ .text.sd_ble_gatts_service_changed
+                0x000000000002c880        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .text.sd_ble_gatts_sys_attr_set
+                0x000000000002c884        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .text.sd_ble_gatts_sys_attr_get
+                0x000000000002c888        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .text.sd_ble_gatts_initial_user_handle_get
+                0x000000000002c88c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .text.service_changed_pending_set
+                0x000000000002c890       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .text.gscm_pdb_evt_handler
+                0x000000000002c8d8       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002c8d8                gscm_pdb_evt_handler
+ .text.gscm_init
+                0x000000000002c8f0       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002c8f0                gscm_init
+ .text.gscm_local_db_cache_update
+                0x000000000002c900       0xb8 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002c900                gscm_local_db_cache_update
+ .text.gscm_local_db_cache_apply
+                0x000000000002c9b8       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002c9b8                gscm_local_db_cache_apply
+ .text.gscm_service_changed_ind_needed
+                0x000000000002ca5c       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002ca5c                gscm_service_changed_ind_needed
+ .text.gscm_service_changed_ind_send
+                0x000000000002ca80       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002ca80                gscm_service_changed_ind_send
+ .text.gscm_db_change_notification_done
+                0x000000000002cad8       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x000000000002cad8                gscm_db_change_notification_done
+ .text.sd_ecb_block_encrypt
+                0x000000000002cafc        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+ .text.is_valid_irk
+                0x000000000002cb00       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cb00                is_valid_irk
+ .text.addr_compare
+                0x000000000002cb16       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cb16                addr_compare
+ .text.im_is_duplicate_bonding_data
+                0x000000000002cb3e       0x62 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cb3e                im_is_duplicate_bonding_data
+ .text.im_find_duplicate_bonding_data
+                0x000000000002cba0       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cba0                im_find_duplicate_bonding_data
+ .text.im_peer_id_get_by_conn_handle
+                0x000000000002cbdc       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cbdc                im_peer_id_get_by_conn_handle
+ .text.im_ble_addr_get
+                0x000000000002cc00       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cc00                im_ble_addr_get
+ .text.im_conn_handle_get
+                0x000000000002cc38       0x44 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cc38                im_conn_handle_get
+ .text.im_master_id_is_valid
+                0x000000000002cc7c       0x1a Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cc7c                im_master_id_is_valid
+ .text.im_master_ids_compare
+                0x000000000002cc96       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cc96                im_master_ids_compare
+ .text.im_peer_id_get_by_master_id
+                0x000000000002ccbe       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002ccbe                im_peer_id_get_by_master_id
+ *fill*         0x000000000002ccfe        0x2 
+ .text.im_new_peer_id
+                0x000000000002cd00       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cd00                im_new_peer_id
+ .text.im_peer_free
+                0x000000000002cd14       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cd14                im_peer_free
+ .text.ah       0x000000000002cd3c       0x54 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cd3c                ah
+ .text.im_address_resolve
+                0x000000000002cd90       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cd90                im_address_resolve
+ .text.im_ble_evt_handler
+                0x000000000002cdd8       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x000000000002cdd8                im_ble_evt_handler
+ .text.sd_ble_gap_data_length_update
+                0x000000000002cea8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .text.sd_ble_gattc_exchange_mtu_request
+                0x000000000002ceac        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .text.sd_ble_gatts_exchange_mtu_reply
+                0x000000000002ceb0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .text.data_length_update
+                0x000000000002ceb4       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .text.nrf_ble_gatt_init
+                0x000000000002cf34       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+                0x000000000002cf34                nrf_ble_gatt_init
+ *fill*         0x000000000002cf5a        0x2 
+ .text.nrf_ble_gatt_on_ble_evt
+                0x000000000002cf5c      0x198 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+                0x000000000002cf5c                nrf_ble_gatt_on_ble_evt
+ .text.sd_ble_gatts_rw_authorize_reply
+                0x000000000002d0f4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+ .text.sd_ble_user_mem_reply
+                0x000000000002d0f8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+ .text.user_mem_reply.part.0
+                0x000000000002d0fc       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+ .text.nrf_ble_qwr_init
+                0x000000000002d120       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+                0x000000000002d120                nrf_ble_qwr_init
+ .text.nrf_ble_qwr_conn_handle_assign
+                0x000000000002d144       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+                0x000000000002d144                nrf_ble_qwr_conn_handle_assign
+ .text.nrf_ble_qwr_on_ble_evt
+                0x000000000002d15a       0xa0 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+                0x000000000002d15a                nrf_ble_qwr_on_ble_evt
+ .text.peer_data_id_is_valid
+                0x000000000002d1fa       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ .text.peer_data_find
+                0x000000000002d20a       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ *fill*         0x000000000002d23a        0x2 
+ .text.peer_data_delete_process
+                0x000000000002d23c       0xb4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ .text.pds_evt_send
+                0x000000000002d2f0        0xa Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ *fill*         0x000000000002d2fa        0x2 
+ .text.fds_evt_handler
+                0x000000000002d2fc       0xe8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ .text.pds_init
+                0x000000000002d3e4       0xa0 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d3e4                pds_init
+ .text.pds_peer_data_read
+                0x000000000002d484       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d484                pds_peer_data_read
+ .text.pds_peer_data_iterate_prepare
+                0x000000000002d4f0       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d4f0                pds_peer_data_iterate_prepare
+ .text.pds_peer_data_iterate
+                0x000000000002d500       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d500                pds_peer_data_iterate
+ .text.pds_peer_data_store
+                0x000000000002d55c       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d55c                pds_peer_data_store
+ .text.pds_peer_id_allocate
+                0x000000000002d600        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d600                pds_peer_id_allocate
+ .text.pds_peer_id_free
+                0x000000000002d608       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d608                pds_peer_id_free
+ .text.pds_peer_id_is_allocated
+                0x000000000002d61e        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d61e                pds_peer_id_is_allocated
+ .text.pds_next_peer_id_get
+                0x000000000002d622        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d622                pds_next_peer_id_get
+ .text.pds_next_deleted_peer_id_get
+                0x000000000002d626        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x000000000002d626                pds_next_deleted_peer_id_get
+ *fill*         0x000000000002d62a        0x2 
+ .text.write_buffer_record_find_next
+                0x000000000002d62c       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .text.write_buffer_record_find
+                0x000000000002d654       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .text.pdb_evt_send
+                0x000000000002d686       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .text.write_buffer_record_release
+                0x000000000002d6a4       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .text.write_buf_store
+                0x000000000002d6e4       0xf4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002d6e4                write_buf_store
+ .text.pdb_pds_evt_handler
+                0x000000000002d7d8      0x118 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002d7d8                pdb_pds_evt_handler
+ .text.pdb_init
+                0x000000000002d8f0       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002d8f0                pdb_init
+ .text.pdb_peer_data_ptr_get
+                0x000000000002d980        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002d980                pdb_peer_data_ptr_get
+ *fill*         0x000000000002d986        0x2 
+ .text.pdb_write_buf_get
+                0x000000000002d988       0xe4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002d988                pdb_write_buf_get
+ .text.pdb_write_buf_release
+                0x000000000002da6c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002da6c                pdb_write_buf_release
+ .text.pdb_peer_free
+                0x000000000002da80       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002da80                pdb_peer_free
+ .text.pdb_write_buf_store
+                0x000000000002db10       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000002db10                pdb_write_buf_store
+ .text.claim    0x000000000002db46       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+ .text.peer_id_init
+                0x000000000002db7c       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002db7c                peer_id_init
+ .text.peer_id_allocate
+                0x000000000002db8c        0xc Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002db8c                peer_id_allocate
+ .text.peer_id_delete
+                0x000000000002db98       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002db98                peer_id_delete
+ .text.peer_id_free
+                0x000000000002dbbc       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dbbc                peer_id_free
+ .text.peer_id_is_allocated
+                0x000000000002dbe4       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dbe4                peer_id_is_allocated
+ .text.peer_id_is_deleted
+                0x000000000002dbf8       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dbf8                peer_id_is_deleted
+ .text.next_id_get
+                0x000000000002dc0c       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dc0c                next_id_get
+ *fill*         0x000000000002dc3e        0x2 
+ .text.peer_id_get_next_used
+                0x000000000002dc40       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dc40                peer_id_get_next_used
+ .text.peer_id_get_next_deleted
+                0x000000000002dc74        0xc Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+                0x000000000002dc74                peer_id_get_next_deleted
+ .text.evt_send
+                0x000000000002dc80       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+ .text.ble_evt_handler
+                0x000000000002dca8       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+ .text.pm_sm_evt_handler
+                0x000000000002dccc        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dccc                pm_sm_evt_handler
+ .text.pm_gcm_evt_handler
+                0x000000000002dcd4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dcd4                pm_gcm_evt_handler
+ .text.pm_im_evt_handler
+                0x000000000002dcd8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dcd8                pm_im_evt_handler
+ .text.pm_init  0x000000000002dcdc      0x104 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dcdc                pm_init
+ .text.pm_register
+                0x000000000002dde0       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dde0                pm_register
+ .text.pm_sec_params_set
+                0x000000000002de10       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002de10                pm_sec_params_set
+ .text.pm_conn_secure
+                0x000000000002de24       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002de24                pm_conn_secure
+ .text.pm_conn_sec_status_get
+                0x000000000002de40       0x6c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002de40                pm_conn_sec_status_get
+ .text.pm_peer_delete
+                0x000000000002deac       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002deac                pm_peer_delete
+ .text.pm_peer_ranks_get
+                0x000000000002dec0       0xf4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dec0                pm_peer_ranks_get
+ .text.rank_vars_update
+                0x000000000002dfb4       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+ .text.pm_pdb_evt_handler
+                0x000000000002dfe0      0x138 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002dfe0                pm_pdb_evt_handler
+ .text.pm_peer_rank_highest
+                0x000000000002e118      0x108 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x000000000002e118                pm_peer_rank_highest
+ .text.sd_ble_gap_disconnect
+                0x000000000002e220        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+ .text._conn_secure
+                0x000000000002e224       0xc4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+ .text.pm_handler_flash_clean
+                0x000000000002e2e8      0x1b0 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+                0x000000000002e2e8                pm_handler_flash_clean
+ .text.pm_handler_flash_clean_on_return
+                0x000000000002e498       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+                0x000000000002e498                pm_handler_flash_clean_on_return
+ *fill*         0x000000000002e4b6        0x2 
+ .text.pm_handler_pm_evt_log
+                0x000000000002e4b8      0x1e4 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+                0x000000000002e4b8                pm_handler_pm_evt_log
+ .text.pm_handler_on_pm_evt
+                0x000000000002e69c       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+                0x000000000002e69c                pm_handler_on_pm_evt
+ .text.pm_buffer_init
+                0x000000000002e6e4       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+                0x000000000002e6e4                pm_buffer_init
+ .text.pm_buffer_ptr_get
+                0x000000000002e70c       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+                0x000000000002e70c                pm_buffer_ptr_get
+ .text.pm_buffer_release
+                0x000000000002e73e       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+                0x000000000002e73e                pm_buffer_release
+ .text.pm_buffer_block_acquire
+                0x000000000002e76e       0x64 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+                0x000000000002e76e                pm_buffer_block_acquire
+ .text.sd_ble_gap_authenticate
+                0x000000000002e7d2        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.sd_ble_gap_sec_params_reply
+                0x000000000002e7d6        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.sd_ble_gap_sec_info_reply
+                0x000000000002e7da        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
  .text.flag_id_init
-                0x000000000002ef40       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
- *fill*         0x000000000002ef52        0x2 
+                0x000000000002e7de       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.evt_send
+                0x000000000002e7f0       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.send_config_req
+                0x000000000002e806       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.send_unexpected_error
+                0x000000000002e82a       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ *fill*         0x000000000002e852        0x2 
+ .text.conn_sec_failure
+                0x000000000002e854       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.pairing_success_evt_send
+                0x000000000002e89c       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ *fill*         0x000000000002e8ca        0x2 
+ .text.sec_proc_start.part.1
+                0x000000000002e8cc       0x50 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.link_secure_failure.part.2
+                0x000000000002e91c       0x90 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .text.smd_init
+                0x000000000002e9ac       0x74 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002e9ac                smd_init
+ .text.smd_params_reply
+                0x000000000002ea20      0x14c Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002ea20                smd_params_reply
+ .text.smd_link_secure
+                0x000000000002eb6c       0x2a Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002eb6c                smd_link_secure
+ *fill*         0x000000000002eb96        0x2 
+ .text.smd_ble_evt_handler
+                0x000000000002eb98      0x350 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x000000000002eb98                smd_ble_evt_handler
+ .text.sec_params_verify
+                0x000000000002eee8       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+ .text.flag_id_init
+                0x000000000002ef44       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+ *fill*         0x000000000002ef56        0x2 
  .text.events_send_from_err_code.part.1
-                0x000000000002ef54       0xa8 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002ef58       0xa8 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
  .text.params_req_send
-                0x000000000002effc       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f000       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
  .text.link_secure
-                0x000000000002f024      0x100 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f028      0x100 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
  .text.link_secure_pending_handle
-                0x000000000002f124       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f128       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
  .text.smd_params_reply_perform
-                0x000000000002f154       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f158       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
  .text.params_reply_pending_handle
-                0x000000000002f1d4        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
- *fill*         0x000000000002f1da        0x2 
+                0x000000000002f1d8        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+ *fill*         0x000000000002f1de        0x2 
  .text.sm_smd_evt_handler
-                0x000000000002f1dc       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f1dc                sm_smd_evt_handler
+                0x000000000002f1e0       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f1e0                sm_smd_evt_handler
  .text.sm_pdb_evt_handler
-                0x000000000002f23c       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f23c                sm_pdb_evt_handler
- .text.sm_init  0x000000000002f284       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f284                sm_init
+                0x000000000002f240       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f240                sm_pdb_evt_handler
+ .text.sm_init  0x000000000002f288       0x5c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f288                sm_init
  .text.sm_ble_evt_handler
-                0x000000000002f2e0       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f2e0                sm_ble_evt_handler
+                0x000000000002f2e4       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f2e4                sm_ble_evt_handler
  .text.sm_sec_params_set
-                0x000000000002f314       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f314                sm_sec_params_set
+                0x000000000002f318       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f318                sm_sec_params_set
  .text.sm_link_secure
-                0x000000000002f350        0xa Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x000000000002f350                sm_link_secure
+                0x000000000002f354        0xa Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000002f354                sm_link_secure
  .text.sd_softdevice_enable
-                0x000000000002f35a        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
- .text.sd_softdevice_disable
                 0x000000000002f35e        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
- *fill*         0x000000000002f362        0x2 
+ .text.sd_softdevice_disable
+                0x000000000002f362        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+ *fill*         0x000000000002f366        0x2 
  .text.sdh_request_observer_notify
-                0x000000000002f364       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f368       0x30 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
  .text.sdh_state_observer_notify
-                0x000000000002f394       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f398       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
  .text.softdevice_evt_irq_disable
-                0x000000000002f3bc       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f3c0       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
  .text.softdevices_evt_irq_enable
-                0x000000000002f3e0       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f3e4       0x38 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
  .text.nrf_sdh_enable_request
-                0x000000000002f418       0x7c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f418                nrf_sdh_enable_request
+                0x000000000002f41c       0x7c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f41c                nrf_sdh_enable_request
  .text.nrf_sdh_disable_request
-                0x000000000002f494       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f494                nrf_sdh_disable_request
+                0x000000000002f498       0x60 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f498                nrf_sdh_disable_request
  .text.nrf_sdh_request_continue
-                0x000000000002f4f4       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f4f4                nrf_sdh_request_continue
+                0x000000000002f4f8       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f4f8                nrf_sdh_request_continue
  .text.nrf_sdh_is_enabled
-                0x000000000002f514        0xc Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f514                nrf_sdh_is_enabled
+                0x000000000002f518        0xc Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f518                nrf_sdh_is_enabled
  .text.nrf_sdh_evts_poll
-                0x000000000002f520       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f520                nrf_sdh_evts_poll
+                0x000000000002f524       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f524                nrf_sdh_evts_poll
  .text.SWI2_EGU2_IRQHandler
-                0x000000000002f548        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x000000000002f548                SWI2_EGU2_IRQHandler
+                0x000000000002f54c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000002f54c                SWI2_EGU2_IRQHandler
  .text.sd_ble_enable
-                0x000000000002f54c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
- .text.sd_ble_cfg_set
                 0x000000000002f550        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
- .text.sd_ble_evt_get
+ .text.sd_ble_cfg_set
                 0x000000000002f554        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+ .text.sd_ble_evt_get
+                0x000000000002f558        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
  .text.nrf_sdh_ble_evts_poll
-                0x000000000002f558       0x50 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+                0x000000000002f55c       0x50 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
  .text.nrf_sdh_ble_default_cfg_set
-                0x000000000002f5a8      0x160 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
-                0x000000000002f5a8                nrf_sdh_ble_default_cfg_set
+                0x000000000002f5ac      0x160 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+                0x000000000002f5ac                nrf_sdh_ble_default_cfg_set
  .text.nrf_sdh_ble_enable
-                0x000000000002f708       0x94 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
-                0x000000000002f708                nrf_sdh_ble_enable
+                0x000000000002f70c       0x94 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+                0x000000000002f70c                nrf_sdh_ble_enable
  .text.sd_evt_get
-                0x000000000002f79c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+                0x000000000002f7a0        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
  .text.nrf_sdh_soc_evts_poll
-                0x000000000002f7a0       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+                0x000000000002f7a4       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
  .text.VL53L0X_get_offset_calibration_data_micro_meter
-                0x000000000002f7dc       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f7dc                VL53L0X_get_offset_calibration_data_micro_meter
+                0x000000000002f7e0       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f7e0                VL53L0X_get_offset_calibration_data_micro_meter
  .text.get_next_good_spad
-                0x000000000002f810       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f810                get_next_good_spad
+                0x000000000002f814       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f814                get_next_good_spad
  .text.is_aperture
-                0x000000000002f858       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f858                is_aperture
+                0x000000000002f85c       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f85c                is_aperture
  .text.enable_spad_bit
-                0x000000000002f86c       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f86c                enable_spad_bit
+                0x000000000002f870       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f870                enable_spad_bit
  .text.set_ref_spad_map
-                0x000000000002f88a        0xa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f88a                set_ref_spad_map
+                0x000000000002f88e        0xa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f88e                set_ref_spad_map
  .text.get_ref_spad_map
-                0x000000000002f894        0xa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f894                get_ref_spad_map
+                0x000000000002f898        0xa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f898                get_ref_spad_map
  .text.enable_ref_spads
-                0x000000000002f89e       0x8c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f89e                enable_ref_spads
+                0x000000000002f8a2       0x8c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f8a2                enable_ref_spads
  .text.perform_ref_signal_measurement
-                0x000000000002f92a       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f92a                perform_ref_signal_measurement
+                0x000000000002f92e       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f92e                perform_ref_signal_measurement
  .text.VL53L0X_set_reference_spads
-                0x000000000002f982       0x98 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002f982                VL53L0X_set_reference_spads
+                0x000000000002f986       0x98 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002f986                VL53L0X_set_reference_spads
  .text.VL53L0X_perform_single_ref_calibration
-                0x000000000002fa1a       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fa1a                VL53L0X_perform_single_ref_calibration
+                0x000000000002fa1e       0x32 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fa1e                VL53L0X_perform_single_ref_calibration
  .text.VL53L0X_ref_calibration_io
-                0x000000000002fa4c       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fa4c                VL53L0X_ref_calibration_io
+                0x000000000002fa50       0xd0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fa50                VL53L0X_ref_calibration_io
  .text.VL53L0X_perform_vhv_calibration
-                0x000000000002fb1c       0x7c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fb1c                VL53L0X_perform_vhv_calibration
+                0x000000000002fb20       0x7c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fb20                VL53L0X_perform_vhv_calibration
  .text.VL53L0X_perform_phase_calibration
-                0x000000000002fb98       0x76 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fb98                VL53L0X_perform_phase_calibration
+                0x000000000002fb9c       0x76 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fb9c                VL53L0X_perform_phase_calibration
  .text.VL53L0X_perform_ref_calibration
-                0x000000000002fc0e       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fc0e                VL53L0X_perform_ref_calibration
+                0x000000000002fc12       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fc12                VL53L0X_perform_ref_calibration
  .text.VL53L0X_perform_ref_spad_management
-                0x000000000002fc44      0x24e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
-                0x000000000002fc44                VL53L0X_perform_ref_spad_management
+                0x000000000002fc48      0x24e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+                0x000000000002fc48                VL53L0X_perform_ref_spad_management
  .text.VL53L0X_measurement_poll_for_completion
-                0x000000000002fe92       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000002fe92                VL53L0X_measurement_poll_for_completion
+                0x000000000002fe96       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x000000000002fe96                VL53L0X_measurement_poll_for_completion
  .text.VL53L0X_isqrt
-                0x000000000002fec8       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000002fec8                VL53L0X_isqrt
+                0x000000000002fecc       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x000000000002fecc                VL53L0X_isqrt
  .text.VL53L0X_device_read_strobe
-                0x000000000002feee       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000002feee                VL53L0X_device_read_strobe
+                0x000000000002fef2       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x000000000002fef2                VL53L0X_device_read_strobe
  .text.VL53L0X_get_info_from_device
-                0x000000000002ff36      0x53a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000002ff36                VL53L0X_get_info_from_device
+                0x000000000002ff3a      0x53a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x000000000002ff3a                VL53L0X_get_info_from_device
  .text.VL53L0X_encode_timeout
-                0x0000000000030470       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030470                VL53L0X_encode_timeout
+                0x0000000000030474       0x1e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030474                VL53L0X_encode_timeout
  .text.VL53L0X_decode_timeout
-                0x000000000003048e        0xc Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000003048e                VL53L0X_decode_timeout
- *fill*         0x000000000003049a        0x2 
+                0x0000000000030492        0xc Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030492                VL53L0X_decode_timeout
+ *fill*         0x000000000003049e        0x2 
  .text.VL53L0X_calc_timeout_mclks
-                0x000000000003049c       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000003049c                VL53L0X_calc_timeout_mclks
+                0x00000000000304a0       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x00000000000304a0                VL53L0X_calc_timeout_mclks
  .text.set_sequence_step_timeout.part.1
-                0x00000000000304c4       0xca Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
- *fill*         0x000000000003058e        0x2 
+                0x00000000000304c8       0xca Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+ *fill*         0x0000000000030592        0x2 
  .text.VL53L0X_calc_timeout_us
-                0x0000000000030590       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030590                VL53L0X_calc_timeout_us
+                0x0000000000030594       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030594                VL53L0X_calc_timeout_us
  .text.get_sequence_step_timeout
-                0x00000000000305b0      0x108 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x00000000000305b0                get_sequence_step_timeout
+                0x00000000000305b4      0x108 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x00000000000305b4                get_sequence_step_timeout
  .text.VL53L0X_get_vcsel_pulse_period
-                0x00000000000306b8       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x00000000000306b8                VL53L0X_get_vcsel_pulse_period
+                0x00000000000306bc       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x00000000000306bc                VL53L0X_get_vcsel_pulse_period
  .text.VL53L0X_set_measurement_timing_budget_micro_seconds
-                0x00000000000306ec       0xc6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x00000000000306ec                VL53L0X_set_measurement_timing_budget_micro_seconds
+                0x00000000000306f0       0xc6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x00000000000306f0                VL53L0X_set_measurement_timing_budget_micro_seconds
  .text.VL53L0X_get_measurement_timing_budget_micro_seconds
-                0x00000000000307b2       0xca Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x00000000000307b2                VL53L0X_get_measurement_timing_budget_micro_seconds
+                0x00000000000307b6       0xca Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x00000000000307b6                VL53L0X_get_measurement_timing_budget_micro_seconds
  .text.VL53L0X_load_tuning_settings
-                0x000000000003087c       0x9a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x000000000003087c                VL53L0X_load_tuning_settings
+                0x0000000000030880       0x9a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030880                VL53L0X_load_tuning_settings
  .text.VL53L0X_get_total_xtalk_rate
-                0x0000000000030916       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030916                VL53L0X_get_total_xtalk_rate
+                0x000000000003091a       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x000000000003091a                VL53L0X_get_total_xtalk_rate
  .text.VL53L0X_get_total_signal_rate
-                0x0000000000030942       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030942                VL53L0X_get_total_signal_rate
- *fill*         0x000000000003095e        0x2 
+                0x0000000000030946       0x1c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030946                VL53L0X_get_total_signal_rate
+ *fill*         0x0000000000030962        0x2 
  .text.VL53L0X_calc_dmax
-                0x0000000000030960       0xd4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030960                VL53L0X_calc_dmax
+                0x0000000000030964       0xd4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030964                VL53L0X_calc_dmax
  .text.VL53L0X_calc_sigma_estimate
-                0x0000000000030a34      0x218 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030a34                VL53L0X_calc_sigma_estimate
+                0x0000000000030a38      0x218 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030a38                VL53L0X_calc_sigma_estimate
  .text.VL53L0X_get_pal_range_status
-                0x0000000000030c4c      0x1fa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
-                0x0000000000030c4c                VL53L0X_get_pal_range_status
- *fill*         0x0000000000030e46        0x2 
+                0x0000000000030c50      0x1fa Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+                0x0000000000030c50                VL53L0X_get_pal_range_status
+ *fill*         0x0000000000030e4a        0x2 
  .text.VL53L0X_get_pal_error_string
-                0x0000000000030e48       0xfc Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
-                0x0000000000030e48                VL53L0X_get_pal_error_string
+                0x0000000000030e4c       0xfc Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
+                0x0000000000030e4c                VL53L0X_get_pal_error_string
  .text.VL53L0X_ClearInterruptMask.part.1
-                0x0000000000030f44       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000030f48       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
  .text.VL53L0X_SetGpioConfig.part.2
-                0x0000000000030f9c      0x11c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000030fa0      0x11c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
  .text.VL53L0X_GetVersion
-                0x00000000000310b8       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000310b8                VL53L0X_GetVersion
+                0x00000000000310bc       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000310bc                VL53L0X_GetVersion
  .text.VL53L0X_GetProductRevision
-                0x00000000000310ca       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000310ca                VL53L0X_GetProductRevision
+                0x00000000000310ce       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000310ce                VL53L0X_GetProductRevision
  .text.VL53L0X_GetPalErrorString
-                0x00000000000310ea        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000310ea                VL53L0X_GetPalErrorString
- *fill*         0x00000000000310ee        0x2 
+                0x00000000000310ee        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000310ee                VL53L0X_GetPalErrorString
+ *fill*         0x00000000000310f2        0x2 
  .text.VL53L0X_SetDeviceMode
-                0x00000000000310f0       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000310f0                VL53L0X_SetDeviceMode
+                0x00000000000310f4       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000310f4                VL53L0X_SetDeviceMode
  .text.VL53L0X_GetFractionEnable
-                0x0000000000031110       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031110                VL53L0X_GetFractionEnable
+                0x0000000000031114       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031114                VL53L0X_GetFractionEnable
  .text.VL53L0X_SetMeasurementTimingBudgetMicroSeconds
-                0x0000000000031128        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031128                VL53L0X_SetMeasurementTimingBudgetMicroSeconds
- .text.VL53L0X_GetVcselPulsePeriod
                 0x000000000003112c        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003112c                VL53L0X_GetVcselPulsePeriod
+                0x000000000003112c                VL53L0X_SetMeasurementTimingBudgetMicroSeconds
+ .text.VL53L0X_GetVcselPulsePeriod
+                0x0000000000031130        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031130                VL53L0X_GetVcselPulsePeriod
  .text.VL53L0X_SetSequenceStepEnable
-                0x0000000000031130       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031130                VL53L0X_SetSequenceStepEnable
+                0x0000000000031134       0xa4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031134                VL53L0X_SetSequenceStepEnable
  .text.VL53L0X_GetSequenceStepEnables
-                0x00000000000311d4       0x3a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000311d4                VL53L0X_GetSequenceStepEnables
+                0x00000000000311d8       0x3a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000311d8                VL53L0X_GetSequenceStepEnables
  .text.VL53L0X_GetInterMeasurementPeriodMilliSeconds
-                0x000000000003120e       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003120e                VL53L0X_GetInterMeasurementPeriodMilliSeconds
+                0x0000000000031212       0x34 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031212                VL53L0X_GetInterMeasurementPeriodMilliSeconds
  .text.VL53L0X_GetXTalkCompensationEnable
-                0x0000000000031242        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031242                VL53L0X_GetXTalkCompensationEnable
+                0x0000000000031246        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031246                VL53L0X_GetXTalkCompensationEnable
  .text.VL53L0X_GetXTalkCompensationRateMegaCps
-                0x000000000003124a       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003124a                VL53L0X_GetXTalkCompensationRateMegaCps
+                0x000000000003124e       0x2e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x000000000003124e                VL53L0X_GetXTalkCompensationRateMegaCps
  .text.VL53L0X_SetLimitCheckEnable
-                0x0000000000031278       0x7e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031278                VL53L0X_SetLimitCheckEnable
+                0x000000000003127c       0x7e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x000000000003127c                VL53L0X_SetLimitCheckEnable
  .text.VL53L0X_GetLimitCheckEnable
-                0x00000000000312f6       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000312f6                VL53L0X_GetLimitCheckEnable
+                0x00000000000312fa       0x18 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000312fa                VL53L0X_GetLimitCheckEnable
  .text.VL53L0X_SetLimitCheckValue
-                0x000000000003130e       0x5a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003130e                VL53L0X_SetLimitCheckValue
+                0x0000000000031312       0x5a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031312                VL53L0X_SetLimitCheckValue
  .text.VL53L0X_GetLimitCheckValue
-                0x0000000000031368       0x6a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031368                VL53L0X_GetLimitCheckValue
+                0x000000000003136c       0x6a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x000000000003136c                VL53L0X_GetLimitCheckValue
  .text.VL53L0X_GetWrapAroundCheckEnable
-                0x00000000000313d2       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000313d2                VL53L0X_GetWrapAroundCheckEnable
+                0x00000000000313d6       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000313d6                VL53L0X_GetWrapAroundCheckEnable
  .text.VL53L0X_GetDeviceParameters
-                0x00000000000313f8       0x76 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000313f8                VL53L0X_GetDeviceParameters
- *fill*         0x000000000003146e        0x2 
+                0x00000000000313fc       0x76 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000313fc                VL53L0X_GetDeviceParameters
+ *fill*         0x0000000000031472        0x2 
  .text.VL53L0X_DataInit
-                0x0000000000031470      0x15c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031470                VL53L0X_DataInit
+                0x0000000000031474      0x15c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031474                VL53L0X_DataInit
  .text.VL53L0X_StaticInit
-                0x00000000000315cc      0x1a8 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000315cc                VL53L0X_StaticInit
+                0x00000000000315d0      0x1a8 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000315d0                VL53L0X_StaticInit
  .text.VL53L0X_PerformRefCalibration
-                0x0000000000031774        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031774                VL53L0X_PerformRefCalibration
+                0x0000000000031778        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031778                VL53L0X_PerformRefCalibration
  .text.VL53L0X_GetRangingMeasurementData
-                0x000000000003177a      0x130 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003177a                VL53L0X_GetRangingMeasurementData
- *fill*         0x00000000000318aa        0x2 
+                0x000000000003177e      0x130 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x000000000003177e                VL53L0X_GetRangingMeasurementData
+ *fill*         0x00000000000318ae        0x2 
  .text.VL53L0X_GetInterruptThresholds
-                0x00000000000318ac       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000318ac                VL53L0X_GetInterruptThresholds
+                0x00000000000318b0       0x40 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000318b0                VL53L0X_GetInterruptThresholds
  .text.VL53L0X_CheckAndLoadInterruptSettings
-                0x00000000000318ec       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x00000000000318ec                VL53L0X_CheckAndLoadInterruptSettings
+                0x00000000000318f0       0x80 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x00000000000318f0                VL53L0X_CheckAndLoadInterruptSettings
  .text.VL53L0X_StartMeasurement
-                0x000000000003196c       0xd6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x000000000003196c                VL53L0X_StartMeasurement
+                0x0000000000031970       0xd6 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031970                VL53L0X_StartMeasurement
  .text.VL53L0X_PerformSingleMeasurement
-                0x0000000000031a42       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031a42                VL53L0X_PerformSingleMeasurement
+                0x0000000000031a46       0x28 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031a46                VL53L0X_PerformSingleMeasurement
  .text.VL53L0X_PerformSingleRangingMeasurement
-                0x0000000000031a6a       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031a6a                VL53L0X_PerformSingleRangingMeasurement
+                0x0000000000031a6e       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031a6e                VL53L0X_PerformSingleRangingMeasurement
  .text.VL53L0X_StopMeasurement
-                0x0000000000031a90       0x54 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031a90                VL53L0X_StopMeasurement
+                0x0000000000031a94       0x54 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031a94                VL53L0X_StopMeasurement
  .text.VL53L0X_ClearInterruptMask
-                0x0000000000031ae4        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031ae4                VL53L0X_ClearInterruptMask
+                0x0000000000031ae8        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031ae8                VL53L0X_ClearInterruptMask
  .text.VL53L0X_GetInterruptMaskStatus
-                0x0000000000031ae8       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031ae8                VL53L0X_GetInterruptMaskStatus
+                0x0000000000031aec       0x26 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031aec                VL53L0X_GetInterruptMaskStatus
  .text.VL53L0X_GetMeasurementDataReady
-                0x0000000000031b0e       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031b0e                VL53L0X_GetMeasurementDataReady
+                0x0000000000031b12       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031b12                VL53L0X_GetMeasurementDataReady
  .text.VL53L0X_PerformRefSpadManagement
-                0x0000000000031b4a        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
-                0x0000000000031b4a                VL53L0X_PerformRefSpadManagement
- *fill*         0x0000000000031b4e        0x2 
+                0x0000000000031b4e        0x4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+                0x0000000000031b4e                VL53L0X_PerformRefSpadManagement
+ *fill*         0x0000000000031b52        0x2 
  .text.VL53L0X_comms_initialise
-                0x0000000000031b50       0x94 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031b50                VL53L0X_comms_initialise
+                0x0000000000031b54       0x94 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031b54                VL53L0X_comms_initialise
  .text.VL53L0X_write_multi
-                0x0000000000031be4       0x4c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031be4                VL53L0X_write_multi
+                0x0000000000031be8       0x4c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031be8                VL53L0X_write_multi
  .text.VL53L0X_read_multi
-                0x0000000000031c30       0x44 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031c30                VL53L0X_read_multi
+                0x0000000000031c34       0x44 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031c34                VL53L0X_read_multi
  .text.VL53L0X_write_byte
-                0x0000000000031c74       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031c74                VL53L0X_write_byte
+                0x0000000000031c78       0x24 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031c78                VL53L0X_write_byte
  .text.VL53L0X_write_word
-                0x0000000000031c98       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031c98                VL53L0X_write_word
+                0x0000000000031c9c       0x2c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031c9c                VL53L0X_write_word
  .text.VL53L0X_read_byte
-                0x0000000000031cc4       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031cc4                VL53L0X_read_byte
+                0x0000000000031cc8       0x3c Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031cc8                VL53L0X_read_byte
  .text.VL53L0X_read_word
-                0x0000000000031d00       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031d00                VL53L0X_read_word
+                0x0000000000031d04       0x48 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031d04                VL53L0X_read_word
  .text.VL53L0X_read_dword
-                0x0000000000031d48       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
-                0x0000000000031d48                VL53L0X_read_dword
+                0x0000000000031d4c       0x58 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+                0x0000000000031d4c                VL53L0X_read_dword
  .text.VL53L0X_WriteMulti
-                0x0000000000031da0       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031da0                VL53L0X_WriteMulti
+                0x0000000000031da4       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031da4                VL53L0X_WriteMulti
  .text.VL53L0X_ReadMulti
-                0x0000000000031dc0       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031dc0                VL53L0X_ReadMulti
+                0x0000000000031dc4       0x20 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031dc4                VL53L0X_ReadMulti
  .text.VL53L0X_WrByte
-                0x0000000000031de0       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031de0                VL53L0X_WrByte
+                0x0000000000031de4       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031de4                VL53L0X_WrByte
  .text.VL53L0X_WrWord
-                0x0000000000031df6       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031df6                VL53L0X_WrWord
+                0x0000000000031dfa       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031dfa                VL53L0X_WrWord
  .text.VL53L0X_UpdateByte
-                0x0000000000031e0c       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031e0c                VL53L0X_UpdateByte
+                0x0000000000031e10       0x36 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031e10                VL53L0X_UpdateByte
  .text.VL53L0X_RdByte
-                0x0000000000031e42       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031e42                VL53L0X_RdByte
+                0x0000000000031e46       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031e46                VL53L0X_RdByte
  .text.VL53L0X_RdWord
-                0x0000000000031e58       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031e58                VL53L0X_RdWord
+                0x0000000000031e5c       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031e5c                VL53L0X_RdWord
  .text.VL53L0X_RdDWord
-                0x0000000000031e6e       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031e6e                VL53L0X_RdDWord
+                0x0000000000031e72       0x16 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031e72                VL53L0X_RdDWord
  .text.VL53L0X_PollingDelay
-                0x0000000000031e84       0x1a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
-                0x0000000000031e84                VL53L0X_PollingDelay
- *fill*         0x0000000000031e9e        0x2 
+                0x0000000000031e88       0x1a Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+                0x0000000000031e88                VL53L0X_PollingDelay
+ *fill*         0x0000000000031ea2        0x2 
  .text.libc.__RAL_ascii_isctype
-                0x0000000000031ea0       0x1c /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031ea4       0x1c /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_toupper
-                0x0000000000031ebc        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031ec0        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_tolower
-                0x0000000000031ec8        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031ecc        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_iswctype
-                0x0000000000031ed4       0x1c /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031ed8       0x1c /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_towupper
-                0x0000000000031ef0        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031ef4        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_towlower
-                0x0000000000031efc        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f00        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_wctomb
-                0x0000000000031f08        0xe /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f08                __RAL_ascii_wctomb
+                0x0000000000031f0c        0xe /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f0c                __RAL_ascii_wctomb
  .text.libc.__RAL_ascii_mbtowc
-                0x0000000000031f16       0x24 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f16                __RAL_ascii_mbtowc
+                0x0000000000031f1a       0x24 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f1a                __RAL_ascii_mbtowc
  .text.libc.abs
-                0x0000000000031f3a        0x8 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f3a                abs
- *fill*         0x0000000000031f42        0x2 
+                0x0000000000031f3e        0x8 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f3e                abs
+ *fill*         0x0000000000031f46        0x2 
  .text.libc.__RAL_isctype
-                0x0000000000031f44       0x14 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f44                __RAL_isctype
+                0x0000000000031f48       0x14 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f48                __RAL_isctype
  .text.libc.isprint
-                0x0000000000031f58        0xa /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f58                isprint
+                0x0000000000031f5c        0xa /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f5c                isprint
  .text.libc.memcmp
-                0x0000000000031f62       0x76 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000031f62                memcmp
+                0x0000000000031f66       0x76 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000031f66                memcmp
  .text.libc.memcpy
-                0x0000000000031fd8       0x52 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x0000000000031fd8                memcpy
-                0x0000000000031fd8                __aeabi_memcpy
-                0x0000000000031fe4                __aeabi_memcpy4
-                0x0000000000031fe4                __aeabi_memcpy8
+                0x0000000000031fdc       0x52 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x0000000000031fdc                memcpy
+                0x0000000000031fdc                __aeabi_memcpy
+                0x0000000000031fe8                __aeabi_memcpy4
+                0x0000000000031fe8                __aeabi_memcpy8
  .text.libc.memset
-                0x000000000003202a       0x66 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x000000000003202a                memset
+                0x000000000003202e       0x66 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x000000000003202e                memset
  .text.libc.strcpy
-                0x0000000000032090       0x44 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x0000000000032090                strcpy
+                0x0000000000032094       0x44 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x0000000000032094                strcpy
  .text.libc.strlen
-                0x00000000000320d4       0x60 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x00000000000320d4                strlen
-                0x0000000000032134                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x000000000000bd60                __text_size__ = SIZEOF (.text)
-                0x0000000000032134                __text_load_end__ = __text_end__
+                0x00000000000320d8       0x60 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x00000000000320d8                strlen
+                0x0000000000032138                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x000000000000bd64                __text_size__ = SIZEOF (.text)
+                0x0000000000032138                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -11991,272 +11991,272 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 Output/ble_app_template_pca10056_s140 Release/Obj/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .text is too large to fit in FLASH memory segment)
-                0x0000000000032134                __sdh_soc_observers_load_start__ = ALIGN (__text_end__, 0x4)
+                0x0000000000032138                __sdh_soc_observers_load_start__ = ALIGN (__text_end__, 0x4)
 
 .sdh_soc_observers
-                0x0000000000032134       0x18
-                0x0000000000032134                __sdh_soc_observers_start__ = .
-                0x0000000000032134                __start_sdh_soc_observers = __sdh_soc_observers_start__
+                0x0000000000032138       0x18
+                0x0000000000032138                __sdh_soc_observers_start__ = .
+                0x0000000000032138                __start_sdh_soc_observers = __sdh_soc_observers_start__
  *(SORT_BY_NAME(.sdh_soc_observers*))
  .sdh_soc_observers0
-                0x0000000000032134        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
+                0x0000000000032138        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
  .sdh_soc_observers0
-                0x000000000003213c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
+                0x0000000000032140        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
  .sdh_soc_observers1
-                0x0000000000032144        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
-                0x000000000003214c                __sdh_soc_observers_end__ = (__sdh_soc_observers_start__ + SIZEOF (.sdh_soc_observers))
+                0x0000000000032148        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
+                0x0000000000032150                __sdh_soc_observers_end__ = (__sdh_soc_observers_start__ + SIZEOF (.sdh_soc_observers))
                 0x0000000000000018                __sdh_soc_observers_size__ = SIZEOF (.sdh_soc_observers)
-                0x000000000003214c                __stop_sdh_soc_observers = __sdh_soc_observers_end__
-                0x000000000003214c                __sdh_soc_observers_load_end__ = __sdh_soc_observers_end__
+                0x0000000000032150                __stop_sdh_soc_observers = __sdh_soc_observers_end__
+                0x0000000000032150                __sdh_soc_observers_load_end__ = __sdh_soc_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_soc_observers_start__ == __sdh_soc_observers_end__) || ((__sdh_soc_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_soc_observers is too large to fit in FLASH memory segment)
-                0x000000000003214c                __pwr_mgmt_data_load_start__ = ALIGN (__sdh_soc_observers_end__, 0x4)
+                0x0000000000032150                __pwr_mgmt_data_load_start__ = ALIGN (__sdh_soc_observers_end__, 0x4)
 
-.pwr_mgmt_data  0x000000000003214c        0x0
-                0x000000000003214c                __pwr_mgmt_data_start__ = .
-                0x000000000003214c                __start_pwr_mgmt_data = __pwr_mgmt_data_start__
+.pwr_mgmt_data  0x0000000000032150        0x0
+                0x0000000000032150                __pwr_mgmt_data_start__ = .
+                0x0000000000032150                __start_pwr_mgmt_data = __pwr_mgmt_data_start__
  *(SORT_BY_NAME(.pwr_mgmt_data*))
-                0x000000000003214c                __pwr_mgmt_data_end__ = (__pwr_mgmt_data_start__ + SIZEOF (.pwr_mgmt_data))
+                0x0000000000032150                __pwr_mgmt_data_end__ = (__pwr_mgmt_data_start__ + SIZEOF (.pwr_mgmt_data))
                 0x0000000000000000                __pwr_mgmt_data_size__ = SIZEOF (.pwr_mgmt_data)
-                0x000000000003214c                __stop_pwr_mgmt_data = __pwr_mgmt_data_end__
-                0x000000000003214c                __pwr_mgmt_data_load_end__ = __pwr_mgmt_data_end__
+                0x0000000000032150                __stop_pwr_mgmt_data = __pwr_mgmt_data_end__
+                0x0000000000032150                __pwr_mgmt_data_load_end__ = __pwr_mgmt_data_end__
                 0x0000000000000001                . = ASSERT (((__pwr_mgmt_data_start__ == __pwr_mgmt_data_end__) || ((__pwr_mgmt_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .pwr_mgmt_data is too large to fit in FLASH memory segment)
-                0x000000000003214c                __sdh_ble_observers_load_start__ = ALIGN (__pwr_mgmt_data_end__, 0x4)
+                0x0000000000032150                __sdh_ble_observers_load_start__ = ALIGN (__pwr_mgmt_data_end__, 0x4)
 
 .sdh_ble_observers
-                0x000000000003214c       0x40
-                0x000000000003214c                __sdh_ble_observers_start__ = .
-                0x000000000003214c                __start_sdh_ble_observers = __sdh_ble_observers_start__
+                0x0000000000032150       0x40
+                0x0000000000032150                __sdh_ble_observers_start__ = .
+                0x0000000000032150                __start_sdh_ble_observers = __sdh_ble_observers_start__
  *(SORT_BY_NAME(.sdh_ble_observers*))
  .sdh_ble_observers0
-                0x000000000003214c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+                0x0000000000032150        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
  .sdh_ble_observers1
-                0x0000000000032154        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o
+                0x0000000000032158        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o
  .sdh_ble_observers1
-                0x000000000003215c       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
+                0x0000000000032160       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
  .sdh_ble_observers1
-                0x000000000003216c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+                0x0000000000032170        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
  .sdh_ble_observers1
-                0x0000000000032174        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x0000000000032178        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
  .sdh_ble_observers2
-                0x000000000003217c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
+                0x0000000000032180        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
  .sdh_ble_observers3
-                0x0000000000032184        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
-                0x000000000003218c                __sdh_ble_observers_end__ = (__sdh_ble_observers_start__ + SIZEOF (.sdh_ble_observers))
+                0x0000000000032188        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
+                0x0000000000032190                __sdh_ble_observers_end__ = (__sdh_ble_observers_start__ + SIZEOF (.sdh_ble_observers))
                 0x0000000000000040                __sdh_ble_observers_size__ = SIZEOF (.sdh_ble_observers)
-                0x000000000003218c                __stop_sdh_ble_observers = __sdh_ble_observers_end__
-                0x000000000003218c                __sdh_ble_observers_load_end__ = __sdh_ble_observers_end__
+                0x0000000000032190                __stop_sdh_ble_observers = __sdh_ble_observers_end__
+                0x0000000000032190                __sdh_ble_observers_load_end__ = __sdh_ble_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_ble_observers_start__ == __sdh_ble_observers_end__) || ((__sdh_ble_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_ble_observers is too large to fit in FLASH memory segment)
-                0x000000000003218c                __sdh_stack_observers_load_start__ = ALIGN (__sdh_ble_observers_end__, 0x4)
+                0x0000000000032190                __sdh_stack_observers_load_start__ = ALIGN (__sdh_ble_observers_end__, 0x4)
 
 .sdh_stack_observers
-                0x000000000003218c       0x10
-                0x000000000003218c                __sdh_stack_observers_start__ = .
-                0x000000000003218c                __start_sdh_stack_observers = __sdh_stack_observers_start__
+                0x0000000000032190       0x10
+                0x0000000000032190                __sdh_stack_observers_start__ = .
+                0x0000000000032190                __start_sdh_stack_observers = __sdh_stack_observers_start__
  *(SORT_BY_NAME(.sdh_stack_observers*))
  .sdh_stack_observers0
-                0x000000000003218c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+                0x0000000000032190        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
  .sdh_stack_observers0
-                0x0000000000032194        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
-                0x000000000003219c                __sdh_stack_observers_end__ = (__sdh_stack_observers_start__ + SIZEOF (.sdh_stack_observers))
+                0x0000000000032198        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+                0x00000000000321a0                __sdh_stack_observers_end__ = (__sdh_stack_observers_start__ + SIZEOF (.sdh_stack_observers))
                 0x0000000000000010                __sdh_stack_observers_size__ = SIZEOF (.sdh_stack_observers)
-                0x000000000003219c                __stop_sdh_stack_observers = __sdh_stack_observers_end__
-                0x000000000003219c                __sdh_stack_observers_load_end__ = __sdh_stack_observers_end__
+                0x00000000000321a0                __stop_sdh_stack_observers = __sdh_stack_observers_end__
+                0x00000000000321a0                __sdh_stack_observers_load_end__ = __sdh_stack_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_stack_observers_start__ == __sdh_stack_observers_end__) || ((__sdh_stack_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_stack_observers is too large to fit in FLASH memory segment)
-                0x000000000003219c                __sdh_req_observers_load_start__ = ALIGN (__sdh_stack_observers_end__, 0x4)
+                0x00000000000321a0                __sdh_req_observers_load_start__ = ALIGN (__sdh_stack_observers_end__, 0x4)
 
 .sdh_req_observers
-                0x000000000003219c        0x8
-                0x000000000003219c                __sdh_req_observers_start__ = .
-                0x000000000003219c                __start_sdh_req_observers = __sdh_req_observers_start__
+                0x00000000000321a0        0x8
+                0x00000000000321a0                __sdh_req_observers_start__ = .
+                0x00000000000321a0                __start_sdh_req_observers = __sdh_req_observers_start__
  *(SORT_BY_NAME(.sdh_req_observers*))
  .sdh_req_observers0
-                0x000000000003219c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
-                0x000000000003219c                m_req_obs
-                0x00000000000321a4                __sdh_req_observers_end__ = (__sdh_req_observers_start__ + SIZEOF (.sdh_req_observers))
+                0x00000000000321a0        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
+                0x00000000000321a0                m_req_obs
+                0x00000000000321a8                __sdh_req_observers_end__ = (__sdh_req_observers_start__ + SIZEOF (.sdh_req_observers))
                 0x0000000000000008                __sdh_req_observers_size__ = SIZEOF (.sdh_req_observers)
-                0x00000000000321a4                __stop_sdh_req_observers = __sdh_req_observers_end__
-                0x00000000000321a4                __sdh_req_observers_load_end__ = __sdh_req_observers_end__
+                0x00000000000321a8                __stop_sdh_req_observers = __sdh_req_observers_end__
+                0x00000000000321a8                __sdh_req_observers_load_end__ = __sdh_req_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_req_observers_start__ == __sdh_req_observers_end__) || ((__sdh_req_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_req_observers is too large to fit in FLASH memory segment)
-                0x00000000000321a4                __sdh_state_observers_load_start__ = ALIGN (__sdh_req_observers_end__, 0x4)
+                0x00000000000321a8                __sdh_state_observers_load_start__ = ALIGN (__sdh_req_observers_end__, 0x4)
 
 .sdh_state_observers
-                0x00000000000321a4       0x10
-                0x00000000000321a4                __sdh_state_observers_start__ = .
-                0x00000000000321a4                __start_sdh_state_observers = __sdh_state_observers_start__
+                0x00000000000321a8       0x10
+                0x00000000000321a8                __sdh_state_observers_start__ = .
+                0x00000000000321a8                __start_sdh_state_observers = __sdh_state_observers_start__
  *(SORT_BY_NAME(.sdh_state_observers*))
  .sdh_state_observers0
-                0x00000000000321a4        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
+                0x00000000000321a8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage_sd.o
  .sdh_state_observers0
-                0x00000000000321ac        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
-                0x00000000000321b4                __sdh_state_observers_end__ = (__sdh_state_observers_start__ + SIZEOF (.sdh_state_observers))
+                0x00000000000321b0        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
+                0x00000000000321b8                __sdh_state_observers_end__ = (__sdh_state_observers_start__ + SIZEOF (.sdh_state_observers))
                 0x0000000000000010                __sdh_state_observers_size__ = SIZEOF (.sdh_state_observers)
-                0x00000000000321b4                __stop_sdh_state_observers = __sdh_state_observers_end__
-                0x00000000000321b4                __sdh_state_observers_load_end__ = __sdh_state_observers_end__
+                0x00000000000321b8                __stop_sdh_state_observers = __sdh_state_observers_end__
+                0x00000000000321b8                __sdh_state_observers_load_end__ = __sdh_state_observers_end__
                 0x0000000000000001                . = ASSERT (((__sdh_state_observers_start__ == __sdh_state_observers_end__) || ((__sdh_state_observers_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .sdh_state_observers is too large to fit in FLASH memory segment)
-                0x00000000000321b4                __nrf_queue_load_start__ = ALIGN (__sdh_state_observers_end__, 0x4)
+                0x00000000000321b8                __nrf_queue_load_start__ = ALIGN (__sdh_state_observers_end__, 0x4)
 
-.nrf_queue      0x00000000000321b4        0x0
-                0x00000000000321b4                __nrf_queue_start__ = .
-                0x00000000000321b4                __start_nrf_queue = __nrf_queue_start__
+.nrf_queue      0x00000000000321b8        0x0
+                0x00000000000321b8                __nrf_queue_start__ = .
+                0x00000000000321b8                __start_nrf_queue = __nrf_queue_start__
  *(.nrf_queue*)
-                0x00000000000321b4                __nrf_queue_end__ = (__nrf_queue_start__ + SIZEOF (.nrf_queue))
+                0x00000000000321b8                __nrf_queue_end__ = (__nrf_queue_start__ + SIZEOF (.nrf_queue))
                 0x0000000000000000                __nrf_queue_size__ = SIZEOF (.nrf_queue)
-                0x00000000000321b4                __stop_nrf_queue = __nrf_queue_end__
-                0x00000000000321b4                __nrf_queue_load_end__ = __nrf_queue_end__
+                0x00000000000321b8                __stop_nrf_queue = __nrf_queue_end__
+                0x00000000000321b8                __nrf_queue_load_end__ = __nrf_queue_end__
                 0x0000000000000001                . = ASSERT (((__nrf_queue_start__ == __nrf_queue_end__) || ((__nrf_queue_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_queue is too large to fit in FLASH memory segment)
-                0x00000000000321b4                __nrf_balloc_load_start__ = ALIGN (__nrf_queue_end__, 0x4)
+                0x00000000000321b8                __nrf_balloc_load_start__ = ALIGN (__nrf_queue_end__, 0x4)
 
-.nrf_balloc     0x00000000000321b4       0x14
-                0x00000000000321b4                __nrf_balloc_start__ = .
-                0x00000000000321b4                __start_nrf_balloc = __nrf_balloc_start__
+.nrf_balloc     0x00000000000321b8       0x14
+                0x00000000000321b8                __nrf_balloc_start__ = .
+                0x00000000000321b8                __start_nrf_balloc = __nrf_balloc_start__
  *(.nrf_balloc*)
- .nrf_balloc    0x00000000000321b4       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_frontend.o
-                0x00000000000321b4                log_mempool
-                0x00000000000321c8                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
+ .nrf_balloc    0x00000000000321b8       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_frontend.o
+                0x00000000000321b8                log_mempool
+                0x00000000000321cc                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
                 0x0000000000000014                __nrf_balloc_size__ = SIZEOF (.nrf_balloc)
-                0x00000000000321c8                __stop_nrf_balloc = __nrf_balloc_end__
-                0x00000000000321c8                __nrf_balloc_load_end__ = __nrf_balloc_end__
+                0x00000000000321cc                __stop_nrf_balloc = __nrf_balloc_end__
+                0x00000000000321cc                __nrf_balloc_load_end__ = __nrf_balloc_end__
                 0x0000000000000001                . = ASSERT (((__nrf_balloc_start__ == __nrf_balloc_end__) || ((__nrf_balloc_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_balloc is too large to fit in FLASH memory segment)
-                0x00000000000321c8                __cli_command_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
+                0x00000000000321cc                __cli_command_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
 
-.cli_command    0x00000000000321c8        0x0
-                0x00000000000321c8                __cli_command_start__ = .
-                0x00000000000321c8                __start_cli_command = __cli_command_start__
+.cli_command    0x00000000000321cc        0x0
+                0x00000000000321cc                __cli_command_start__ = .
+                0x00000000000321cc                __start_cli_command = __cli_command_start__
  *(.cli_command*)
-                0x00000000000321c8                __cli_command_end__ = (__cli_command_start__ + SIZEOF (.cli_command))
+                0x00000000000321cc                __cli_command_end__ = (__cli_command_start__ + SIZEOF (.cli_command))
                 0x0000000000000000                __cli_command_size__ = SIZEOF (.cli_command)
-                0x00000000000321c8                __stop_cli_command = __cli_command_end__
-                0x00000000000321c8                __cli_command_load_end__ = __cli_command_end__
+                0x00000000000321cc                __stop_cli_command = __cli_command_end__
+                0x00000000000321cc                __cli_command_load_end__ = __cli_command_end__
                 0x0000000000000001                . = ASSERT (((__cli_command_start__ == __cli_command_end__) || ((__cli_command_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .cli_command is too large to fit in FLASH memory segment)
-                0x00000000000321c8                __crypto_data_load_start__ = ALIGN (__cli_command_end__, 0x4)
+                0x00000000000321cc                __crypto_data_load_start__ = ALIGN (__cli_command_end__, 0x4)
 
-.crypto_data    0x00000000000321c8        0x0
-                0x00000000000321c8                __crypto_data_start__ = .
-                0x00000000000321c8                __start_crypto_data = __crypto_data_start__
+.crypto_data    0x00000000000321cc        0x0
+                0x00000000000321cc                __crypto_data_start__ = .
+                0x00000000000321cc                __start_crypto_data = __crypto_data_start__
  *(SORT_BY_NAME(.crypto_data*))
-                0x00000000000321c8                __crypto_data_end__ = (__crypto_data_start__ + SIZEOF (.crypto_data))
+                0x00000000000321cc                __crypto_data_end__ = (__crypto_data_start__ + SIZEOF (.crypto_data))
                 0x0000000000000000                __crypto_data_size__ = SIZEOF (.crypto_data)
-                0x00000000000321c8                __stop_crypto_data = __crypto_data_end__
-                0x00000000000321c8                __crypto_data_load_end__ = __crypto_data_end__
+                0x00000000000321cc                __stop_crypto_data = __crypto_data_end__
+                0x00000000000321cc                __crypto_data_load_end__ = __crypto_data_end__
                 0x0000000000000001                . = ASSERT (((__crypto_data_start__ == __crypto_data_end__) || ((__crypto_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .crypto_data is too large to fit in FLASH memory segment)
-                0x00000000000321c8                __log_const_data_load_start__ = ALIGN (__crypto_data_end__, 0x4)
+                0x00000000000321cc                __log_const_data_load_start__ = ALIGN (__crypto_data_end__, 0x4)
 
 .log_const_data
-                0x00000000000321c8       0xc8
-                0x00000000000321c8                __log_const_data_start__ = .
-                0x00000000000321c8                __start_log_const_data = __log_const_data_start__
+                0x00000000000321cc       0xc8
+                0x00000000000321cc                __log_const_data_start__ = .
+                0x00000000000321cc                __start_log_const_data = __log_const_data_start__
  *(SORT_BY_NAME(.log_const_data*))
  .log_const_data_CLOCK
-                0x00000000000321c8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_clock.o
-                0x00000000000321c8                m_nrf_log_CLOCK_logs_data_const
+                0x00000000000321cc        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_clock.o
+                0x00000000000321cc                m_nrf_log_CLOCK_logs_data_const
  .log_const_data_GPIOTE
-                0x00000000000321d0        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_gpiote.o
-                0x00000000000321d0                m_nrf_log_GPIOTE_logs_data_const
+                0x00000000000321d4        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_gpiote.o
+                0x00000000000321d4                m_nrf_log_GPIOTE_logs_data_const
  .log_const_data_PRS
-                0x00000000000321d8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_prs.o
-                0x00000000000321d8                m_nrf_log_PRS_logs_data_const
+                0x00000000000321dc        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_prs.o
+                0x00000000000321dc                m_nrf_log_PRS_logs_data_const
  .log_const_data_PWM
-                0x00000000000321e0        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_pwm.o
-                0x00000000000321e0                m_nrf_log_PWM_logs_data_const
+                0x00000000000321e4        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_pwm.o
+                0x00000000000321e4                m_nrf_log_PWM_logs_data_const
  .log_const_data_SAADC
-                0x00000000000321e8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_saadc.o
-                0x00000000000321e8                m_nrf_log_SAADC_logs_data_const
+                0x00000000000321ec        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_saadc.o
+                0x00000000000321ec                m_nrf_log_SAADC_logs_data_const
  .log_const_data_TWI
-                0x00000000000321f0        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_twi.o
-                0x00000000000321f0                m_nrf_log_TWI_logs_data_const
+                0x00000000000321f4        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_twi.o
+                0x00000000000321f4                m_nrf_log_TWI_logs_data_const
  .log_const_data_UART
-                0x00000000000321f8        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uart.o
-                0x00000000000321f8                m_nrf_log_UART_logs_data_const
+                0x00000000000321fc        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uart.o
+                0x00000000000321fc                m_nrf_log_UART_logs_data_const
  .log_const_data_UARTE
-                0x0000000000032200        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uarte.o
-                0x0000000000032200                m_nrf_log_UARTE_logs_data_const
+                0x0000000000032204        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrfx_uarte.o
+                0x0000000000032204                m_nrf_log_UARTE_logs_data_const
  .log_const_data_app
-                0x0000000000032208        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_frontend.o
-                0x0000000000032208                m_nrf_log_app_logs_data_const
+                0x000000000003220c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_frontend.o
+                0x000000000003220c                m_nrf_log_app_logs_data_const
  .log_const_data_clock
-                0x0000000000032210        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
-                0x0000000000032210                m_nrf_log_clock_logs_data_const
+                0x0000000000032214        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_drv_clock.o
+                0x0000000000032214                m_nrf_log_clock_logs_data_const
  .log_const_data_nrf_ble_gatt
-                0x0000000000032218        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
-                0x0000000000032218                m_nrf_log_nrf_ble_gatt_logs_data_const
+                0x000000000003221c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+                0x000000000003221c                m_nrf_log_nrf_ble_gatt_logs_data_const
  .log_const_data_nrf_fstorage
-                0x0000000000032220        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage.o
-                0x0000000000032220                m_nrf_log_nrf_fstorage_logs_data_const
+                0x0000000000032224        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_fstorage.o
+                0x0000000000032224                m_nrf_log_nrf_fstorage_logs_data_const
  .log_const_data_nrf_sdh
-                0x0000000000032228        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
-                0x0000000000032228                m_nrf_log_nrf_sdh_logs_data_const
+                0x000000000003222c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+                0x000000000003222c                m_nrf_log_nrf_sdh_logs_data_const
  .log_const_data_nrf_sdh_ble
-                0x0000000000032230        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
-                0x0000000000032230                m_nrf_log_nrf_sdh_ble_logs_data_const
+                0x0000000000032234        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+                0x0000000000032234                m_nrf_log_nrf_sdh_ble_logs_data_const
  .log_const_data_nrf_sdh_soc
-                0x0000000000032238        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
-                0x0000000000032238                m_nrf_log_nrf_sdh_soc_logs_data_const
+                0x000000000003223c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+                0x000000000003223c                m_nrf_log_nrf_sdh_soc_logs_data_const
  .log_const_data_peer_manager
-                0x0000000000032240        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
-                0x0000000000032240                m_nrf_log_peer_manager_logs_data_const
+                0x0000000000032244        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+                0x0000000000032244                m_nrf_log_peer_manager_logs_data_const
  .log_const_data_peer_manager_gcm
-                0x0000000000032248        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
-                0x0000000000032248                m_nrf_log_peer_manager_gcm_logs_data_const
+                0x000000000003224c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+                0x000000000003224c                m_nrf_log_peer_manager_gcm_logs_data_const
  .log_const_data_peer_manager_gscm
-                0x0000000000032250        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
-                0x0000000000032250                m_nrf_log_peer_manager_gscm_logs_data_const
+                0x0000000000032254        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+                0x0000000000032254                m_nrf_log_peer_manager_gscm_logs_data_const
  .log_const_data_peer_manager_handler
-                0x0000000000032258        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
-                0x0000000000032258                m_nrf_log_peer_manager_handler_logs_data_const
+                0x000000000003225c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+                0x000000000003225c                m_nrf_log_peer_manager_handler_logs_data_const
  .log_const_data_peer_manager_im
-                0x0000000000032260        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
-                0x0000000000032260                m_nrf_log_peer_manager_im_logs_data_const
+                0x0000000000032264        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+                0x0000000000032264                m_nrf_log_peer_manager_im_logs_data_const
  .log_const_data_peer_manager_pdb
-                0x0000000000032268        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
-                0x0000000000032268                m_nrf_log_peer_manager_pdb_logs_data_const
+                0x000000000003226c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+                0x000000000003226c                m_nrf_log_peer_manager_pdb_logs_data_const
  .log_const_data_peer_manager_pds
-                0x0000000000032270        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
-                0x0000000000032270                m_nrf_log_peer_manager_pds_logs_data_const
+                0x0000000000032274        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+                0x0000000000032274                m_nrf_log_peer_manager_pds_logs_data_const
  .log_const_data_peer_manager_sm
-                0x0000000000032278        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
-                0x0000000000032278                m_nrf_log_peer_manager_sm_logs_data_const
+                0x000000000003227c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+                0x000000000003227c                m_nrf_log_peer_manager_sm_logs_data_const
  .log_const_data_peer_manager_smd
-                0x0000000000032280        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
-                0x0000000000032280                m_nrf_log_peer_manager_smd_logs_data_const
+                0x0000000000032284        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+                0x0000000000032284                m_nrf_log_peer_manager_smd_logs_data_const
  .log_const_data_pwr_mgmt
-                0x0000000000032288        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_pwr_mgmt.o
-                0x0000000000032288                m_nrf_log_pwr_mgmt_logs_data_const
-                0x0000000000032290                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
+                0x000000000003228c        0x8 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_pwr_mgmt.o
+                0x000000000003228c                m_nrf_log_pwr_mgmt_logs_data_const
+                0x0000000000032294                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
                 0x00000000000000c8                __log_const_data_size__ = SIZEOF (.log_const_data)
-                0x0000000000032290                __stop_log_const_data = __log_const_data_end__
-                0x0000000000032290                __log_const_data_load_end__ = __log_const_data_end__
+                0x0000000000032294                __stop_log_const_data = __log_const_data_end__
+                0x0000000000032294                __log_const_data_load_end__ = __log_const_data_end__
                 0x0000000000000001                . = ASSERT (((__log_const_data_start__ == __log_const_data_end__) || ((__log_const_data_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_const_data is too large to fit in FLASH memory segment)
-                0x0000000000032290                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
+                0x0000000000032294                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
 
-.log_backends   0x0000000000032290       0x10
-                0x0000000000032290                __log_backends_start__ = .
-                0x0000000000032290                __start_log_backends = __log_backends_start__
+.log_backends   0x0000000000032294       0x10
+                0x0000000000032294                __log_backends_start__ = .
+                0x0000000000032294                __start_log_backends = __log_backends_start__
  *(SORT_BY_NAME(.log_backends*))
- .log_backends  0x0000000000032290       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_default_backends.o
-                0x00000000000322a0                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
+ .log_backends  0x0000000000032294       0x10 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_default_backends.o
+                0x00000000000322a4                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
                 0x0000000000000010                __log_backends_size__ = SIZEOF (.log_backends)
-                0x00000000000322a0                __stop_log_backends = __log_backends_end__
-                0x00000000000322a0                __log_backends_load_end__ = __log_backends_end__
+                0x00000000000322a4                __stop_log_backends = __log_backends_end__
+                0x00000000000322a4                __log_backends_load_end__ = __log_backends_end__
                 0x0000000000000001                . = ASSERT (((__log_backends_start__ == __log_backends_end__) || ((__log_backends_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_backends is too large to fit in FLASH memory segment)
-                0x00000000000322a0                __nrf_sections_load_start__ = ALIGN (__log_backends_end__, 0x4)
+                0x00000000000322a4                __nrf_sections_load_start__ = ALIGN (__log_backends_end__, 0x4)
 
-.nrf_sections   0x00000000000322a0        0x0
-                0x00000000000322a0                __nrf_sections_start__ = .
-                0x00000000000322a0                __start_nrf_sections = __nrf_sections_start__
+.nrf_sections   0x00000000000322a4        0x0
+                0x00000000000322a4                __nrf_sections_start__ = .
+                0x00000000000322a4                __start_nrf_sections = __nrf_sections_start__
  *(.nrf_sections .nrf_sections.*)
-                0x00000000000322a0                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
+                0x00000000000322a4                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
                 0x0000000000000000                __nrf_sections_size__ = SIZEOF (.nrf_sections)
-                0x00000000000322a0                __nrf_sections_load_end__ = __nrf_sections_end__
+                0x00000000000322a4                __nrf_sections_load_end__ = __nrf_sections_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_start__ == __nrf_sections_end__) || ((__nrf_sections_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .nrf_sections is too large to fit in FLASH memory segment)
-                0x00000000000322a0                __cli_sorted_cmd_ptrs_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
+                0x00000000000322a4                __cli_sorted_cmd_ptrs_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
 
 .cli_sorted_cmd_ptrs
-                0x0000000020002220        0x0 load address 0x00000000000322a0
+                0x0000000020002220        0x0 load address 0x00000000000322a4
                 0x0000000020002220                __cli_sorted_cmd_ptrs_start__ = .
  *(.cli_sorted_cmd_ptrs*)
                 0x0000000020002220                __cli_sorted_cmd_ptrs_end__ = (__cli_sorted_cmd_ptrs_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
                 0x0000000000000000                __cli_sorted_cmd_ptrs_size__ = SIZEOF (.cli_sorted_cmd_ptrs)
-                0x00000000000322a0                __cli_sorted_cmd_ptrs_load_end__ = (__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
+                0x00000000000322a4                __cli_sorted_cmd_ptrs_load_end__ = (__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs))
                 0x0000000000000001                . = ASSERT (((__cli_sorted_cmd_ptrs_load_start__ == __cli_sorted_cmd_ptrs_load_end__) || ((__cli_sorted_cmd_ptrs_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .cli_sorted_cmd_ptrs is too large to fit in FLASH memory segment)
 
 .cli_sorted_cmd_ptrs_run
@@ -12269,19 +12269,19 @@ Linker script and memory map
                 0x0000000020002220                __stop_cli_sorted_cmd_ptrs = __cli_sorted_cmd_ptrs_run_end__
                 0x0000000020002220                __cli_sorted_cmd_ptrs_run_load_end__ = __cli_sorted_cmd_ptrs_run_end__
                 0x0000000000000001                . = ASSERT (((__cli_sorted_cmd_ptrs_run_start__ == __cli_sorted_cmd_ptrs_run_end__) || ((__cli_sorted_cmd_ptrs_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .cli_sorted_cmd_ptrs_run is too large to fit in RAM memory segment)
-                0x00000000000322a0                __fs_data_load_start__ = ALIGN ((__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs)), 0x4)
+                0x00000000000322a4                __fs_data_load_start__ = ALIGN ((__cli_sorted_cmd_ptrs_load_start__ + SIZEOF (.cli_sorted_cmd_ptrs)), 0x4)
 
-.fs_data        0x0000000020002220       0x14 load address 0x00000000000322a0
+.fs_data        0x0000000020002220       0x14 load address 0x00000000000322a4
                 0x0000000020002220                __fs_data_start__ = .
  *(.fs_data*)
  .fs_data       0x0000000020002220       0x14 Output/ble_app_template_pca10056_s140 Release/Obj/fds.o
                 0x0000000020002220                m_fs
                 0x0000000020002234                __fs_data_end__ = (__fs_data_start__ + SIZEOF (.fs_data))
                 0x0000000000000014                __fs_data_size__ = SIZEOF (.fs_data)
-                0x00000000000322b4                __fs_data_load_end__ = (__fs_data_load_start__ + SIZEOF (.fs_data))
+                0x00000000000322b8                __fs_data_load_end__ = (__fs_data_load_start__ + SIZEOF (.fs_data))
                 0x0000000000000001                . = ASSERT (((__fs_data_load_start__ == __fs_data_load_end__) || ((__fs_data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .fs_data is too large to fit in FLASH memory segment)
 
-.fs_data_run    0x0000000020002220       0x14 load address 0x00000000000322a0
+.fs_data_run    0x0000000020002220       0x14 load address 0x00000000000322a4
                 0x0000000020002220                __fs_data_run_start__ = .
                 0x0000000020002220                __start_fs_data = __fs_data_run_start__
                 0x0000000020002234                . = MAX ((__fs_data_run_start__ + SIZEOF (.fs_data)), .)
@@ -12291,15 +12291,15 @@ Linker script and memory map
                 0x0000000020002234                __stop_fs_data = __fs_data_run_end__
                 0x0000000020002234                __fs_data_run_load_end__ = __fs_data_run_end__
                 0x0000000000000001                . = ASSERT (((__fs_data_run_start__ == __fs_data_run_end__) || ((__fs_data_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .fs_data_run is too large to fit in RAM memory segment)
-                0x00000000000322b4                __log_dynamic_data_load_start__ = ALIGN ((__fs_data_load_start__ + SIZEOF (.fs_data)), 0x4)
+                0x00000000000322b8                __log_dynamic_data_load_start__ = ALIGN ((__fs_data_load_start__ + SIZEOF (.fs_data)), 0x4)
 
 .log_dynamic_data
-                0x0000000020002234        0x0 load address 0x00000000000322b4
+                0x0000000020002234        0x0 load address 0x00000000000322b8
                 0x0000000020002234                __log_dynamic_data_start__ = .
  *(SORT_BY_NAME(.log_dynamic_data*))
                 0x0000000020002234                __log_dynamic_data_end__ = (__log_dynamic_data_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000000                __log_dynamic_data_size__ = SIZEOF (.log_dynamic_data)
-                0x00000000000322b4                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
+                0x00000000000322b8                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_load_start__ == __log_dynamic_data_load_end__) || ((__log_dynamic_data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_dynamic_data is too large to fit in FLASH memory segment)
 
 .log_dynamic_data_run
@@ -12312,15 +12312,15 @@ Linker script and memory map
                 0x0000000020002234                __stop_log_dynamic_data = __log_dynamic_data_run_end__
                 0x0000000020002234                __log_dynamic_data_run_load_end__ = __log_dynamic_data_run_end__
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_run_start__ == __log_dynamic_data_run_end__) || ((__log_dynamic_data_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .log_dynamic_data_run is too large to fit in RAM memory segment)
-                0x00000000000322b4                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
+                0x00000000000322b8                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
 
 .log_filter_data
-                0x0000000020002234        0x0 load address 0x00000000000322b4
+                0x0000000020002234        0x0 load address 0x00000000000322b8
                 0x0000000020002234                __log_filter_data_start__ = .
  *(SORT_BY_NAME(.log_filter_data*))
                 0x0000000020002234                __log_filter_data_end__ = (__log_filter_data_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000000                __log_filter_data_size__ = SIZEOF (.log_filter_data)
-                0x00000000000322b4                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
+                0x00000000000322b8                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000001                . = ASSERT (((__log_filter_data_load_start__ == __log_filter_data_load_end__) || ((__log_filter_data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .log_filter_data is too large to fit in FLASH memory segment)
 
 .log_filter_data_run
@@ -12344,36 +12344,36 @@ Linker script and memory map
                 0x0000000000000000                __nrf_sections_run_end_size__ = SIZEOF (.nrf_sections_run_end)
                 0x0000000020002234                __nrf_sections_run_end_load_end__ = __nrf_sections_run_end_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_run_end_start__ == __nrf_sections_run_end_end__) || ((__nrf_sections_run_end_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .nrf_sections_run_end is too large to fit in RAM memory segment)
-                0x00000000000322b4                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
+                0x00000000000322b8                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
 
-.dtors          0x00000000000322b4        0x0
-                0x00000000000322b4                __dtors_start__ = .
+.dtors          0x00000000000322b8        0x0
+                0x00000000000322b8                __dtors_start__ = .
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x00000000000322b4                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x00000000000322b8                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x00000000000322b4                __dtors_load_end__ = __dtors_end__
+                0x00000000000322b8                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .dtors is too large to fit in FLASH memory segment)
-                0x00000000000322b4                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x00000000000322b8                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x00000000000322b4        0x0
-                0x00000000000322b4                __ctors_start__ = .
+.ctors          0x00000000000322b8        0x0
+                0x00000000000322b8                __ctors_start__ = .
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT_BY_NAME(.init_array.*))
-                0x00000000000322b4                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x00000000000322b8                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x00000000000322b4                __ctors_load_end__ = __ctors_end__
+                0x00000000000322b8                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .ctors is too large to fit in FLASH memory segment)
-                0x00000000000322b4                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x00000000000322b8                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x00000000000322b4     0x26d0
-                0x00000000000322b4                __rodata_start__ = .
+.rodata         0x00000000000322b8     0x26cc
+                0x00000000000322b8                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- *fill*         0x00000000000322b4        0xc 
+ *fill*         0x00000000000322b8        0x8 
  .rodata.delay_bytecode.8857
                 0x00000000000322c0        0x6 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_backend_rtt.o
  *fill*         0x00000000000322c6        0x2 
@@ -12713,7 +12713,7 @@ Linker script and memory map
                 0x0000000000034978        0xc /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
                                           0xa (size before relaxing)
                 0x0000000000034984                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x00000000000026d0                __rodata_size__ = SIZEOF (.rodata)
+                0x00000000000026cc                __rodata_size__ = SIZEOF (.rodata)
                 0x0000000000034984                __rodata_load_end__ = __rodata_end__
 
 .rel.dyn        0x0000000000034984        0x0
@@ -13469,7 +13469,7 @@ OUTPUT(Output/Release/Exe/ble_app_template_pca10056_s140.elf elf32-littlearm)
  .comment       0x0000000000000043       0x44 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
  .comment       0x0000000000000043       0x44 /Applications/SEGGER Embedded Studio for ARM 4.16/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
 
-.debug_line     0x0000000000000000    0x35dea
+.debug_line     0x0000000000000000    0x35deb
  .debug_line    0x0000000000000000      0x1e3 Output/ble_app_template_pca10056_s140 Release/Obj/thumb_crt0.o
  .debug_line    0x00000000000001e3      0x910 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_backend_rtt.o
  .debug_line    0x0000000000000af3      0x6f1 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_backend_serial.o
@@ -13511,38 +13511,38 @@ OUTPUT(Output/Release/Exe/ble_app_template_pca10056_s140.elf elf32-littlearm)
  .debug_line    0x00000000000197ed      0x8d4 Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o
  .debug_line    0x000000000001a0c1     0x16b9 Output/ble_app_template_pca10056_s140 Release/Obj/main.o
  .debug_line    0x000000000001b77a      0xdd3 Output/ble_app_template_pca10056_s140 Release/Obj/OpenTrap.o
- .debug_line    0x000000000001c54d      0xdd2 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
- .debug_line    0x000000000001d31f      0xb80 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
- .debug_line    0x000000000001de9f     0x112c Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
- .debug_line    0x000000000001efcb      0xe5a Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
- .debug_line    0x000000000001fe25      0xd4b Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
- .debug_line    0x0000000000020b70      0xa60 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .debug_line    0x00000000000215d0      0xb7a Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
- .debug_line    0x000000000002214a      0x6ca Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
- .debug_line    0x0000000000022814      0xfc6 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .debug_line    0x00000000000237da      0xb50 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .debug_line    0x000000000002432a     0x1054 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
- .debug_line    0x000000000002537e      0xa58 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .debug_line    0x0000000000025dd6      0x60b Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
- .debug_line    0x00000000000263e1      0xf71 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- .debug_line    0x0000000000027352      0xf4a Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .debug_line    0x000000000002829c      0x757 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
- .debug_line    0x00000000000289f3     0x17ee Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
- .debug_line    0x000000000002a1e1      0xf57 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
- .debug_line    0x000000000002b138      0x56f Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
- .debug_line    0x000000000002b6a7     0x1059 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .debug_line    0x000000000002c700      0xd8f Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
- .debug_line    0x000000000002d48f      0xa41 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
- .debug_line    0x000000000002ded0      0x932 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
- .debug_line    0x000000000002e802      0x5ca Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
- .debug_line    0x000000000002edcc     0x1211 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
- .debug_line    0x000000000002ffdd     0x1dda Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
- .debug_line    0x0000000000031db7      0x5b0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
- .debug_line    0x0000000000032367     0x2703 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
- .debug_line    0x0000000000034a6a      0xe8e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
- .debug_line    0x00000000000358f8      0x4f2 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+ .debug_line    0x000000000001c54d      0xdd3 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+ .debug_line    0x000000000001d320      0xb80 Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+ .debug_line    0x000000000001dea0     0x112c Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+ .debug_line    0x000000000001efcc      0xe5a Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+ .debug_line    0x000000000001fe26      0xd4b Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+ .debug_line    0x0000000000020b71      0xa60 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .debug_line    0x00000000000215d1      0xb7a Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+ .debug_line    0x000000000002214b      0x6ca Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
+ .debug_line    0x0000000000022815      0xfc6 Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .debug_line    0x00000000000237db      0xb50 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .debug_line    0x000000000002432b     0x1054 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+ .debug_line    0x000000000002537f      0xa58 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .debug_line    0x0000000000025dd7      0x60b Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+ .debug_line    0x00000000000263e2      0xf71 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ .debug_line    0x0000000000027353      0xf4a Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .debug_line    0x000000000002829d      0x757 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+ .debug_line    0x00000000000289f4     0x17ee Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+ .debug_line    0x000000000002a1e2      0xf57 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+ .debug_line    0x000000000002b139      0x56f Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+ .debug_line    0x000000000002b6a8     0x1059 Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .debug_line    0x000000000002c701      0xd8f Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+ .debug_line    0x000000000002d490      0xa41 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+ .debug_line    0x000000000002ded1      0x932 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+ .debug_line    0x000000000002e803      0x5ca Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+ .debug_line    0x000000000002edcd     0x1211 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+ .debug_line    0x000000000002ffde     0x1dda Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+ .debug_line    0x0000000000031db8      0x5b0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
+ .debug_line    0x0000000000032368     0x2703 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+ .debug_line    0x0000000000034a6b      0xe8e Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+ .debug_line    0x00000000000358f9      0x4f2 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
 
-.debug_info     0x0000000000000000    0x8ee04
+.debug_info     0x0000000000000000    0x8ee17
  .debug_info    0x0000000000000000       0x22 Output/ble_app_template_pca10056_s140 Release/Obj/thumb_crt0.o
  .debug_info    0x0000000000000022      0xe65 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_backend_rtt.o
  .debug_info    0x0000000000000e87      0xef6 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_log_backend_serial.o
@@ -13584,36 +13584,36 @@ OUTPUT(Output/Release/Exe/ble_app_template_pca10056_s140.elf elf32-littlearm)
  .debug_info    0x0000000000037812     0x2505 Output/ble_app_template_pca10056_s140 Release/Obj/bsp_btn_ble.o
  .debug_info    0x0000000000039d17     0x556b Output/ble_app_template_pca10056_s140 Release/Obj/main.o
  .debug_info    0x000000000003f282     0x314c Output/ble_app_template_pca10056_s140 Release/Obj/OpenTrap.o
- .debug_info    0x00000000000423ce     0x1e8c Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
- .debug_info    0x000000000004425a     0x14cc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
- .debug_info    0x0000000000045726     0x1d3b Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
- .debug_info    0x0000000000047461     0x20af Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
- .debug_info    0x0000000000049510     0x370f Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
- .debug_info    0x000000000004cc1f     0x2eff Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
- .debug_info    0x000000000004fb1e     0x2ed9 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
- .debug_info    0x00000000000529f7     0x1311 Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
- .debug_info    0x0000000000053d08     0x400a Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
- .debug_info    0x0000000000057d12     0x1cc3 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
- .debug_info    0x00000000000599d5     0x42b9 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
- .debug_info    0x000000000005dc8e     0x2f80 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
- .debug_info    0x0000000000060c0e     0x264c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
- .debug_info    0x000000000006325a     0x2819 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
- .debug_info    0x0000000000065a73     0x236b Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
- .debug_info    0x0000000000067dde      0xcb3 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
- .debug_info    0x0000000000068a91     0x4a46 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
- .debug_info    0x000000000006d4d7     0x32f5 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
- .debug_info    0x00000000000707cc      0xac8 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
- .debug_info    0x0000000000071294     0x47eb Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
- .debug_info    0x0000000000075a7f     0x368d Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
- .debug_info    0x000000000007910c     0x1860 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
- .debug_info    0x000000000007a96c     0x3289 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
- .debug_info    0x000000000007dbf5      0xc3e Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
- .debug_info    0x000000000007e833     0x2ac4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
- .debug_info    0x00000000000812f7     0x3ae1 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
- .debug_info    0x0000000000084dd8     0x1155 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
- .debug_info    0x0000000000085f2d     0x5ab0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
- .debug_info    0x000000000008b9dd     0x20a3 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
- .debug_info    0x000000000008da80     0x1384 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
+ .debug_info    0x00000000000423ce     0x1e9f Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_GPIO.o
+ .debug_info    0x000000000004426d     0x14cc Output/ble_app_template_pca10056_s140 Release/Obj/OTBLE_VL53L0X.o
+ .debug_info    0x0000000000045739     0x1d3b Output/ble_app_template_pca10056_s140 Release/Obj/SEGGER_RTT.o
+ .debug_info    0x0000000000047474     0x20af Output/ble_app_template_pca10056_s140 Release/Obj/ble_advdata.o
+ .debug_info    0x0000000000049523     0x370f Output/ble_app_template_pca10056_s140 Release/Obj/ble_advertising.o
+ .debug_info    0x000000000004cc32     0x2eff Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_params.o
+ .debug_info    0x000000000004fb31     0x2ed9 Output/ble_app_template_pca10056_s140 Release/Obj/ble_conn_state.o
+ .debug_info    0x0000000000052a0a     0x1311 Output/ble_app_template_pca10056_s140 Release/Obj/ble_srv_common.o
+ .debug_info    0x0000000000053d1b     0x400a Output/ble_app_template_pca10056_s140 Release/Obj/gatt_cache_manager.o
+ .debug_info    0x0000000000057d25     0x1cc3 Output/ble_app_template_pca10056_s140 Release/Obj/gatts_cache_manager.o
+ .debug_info    0x00000000000599e8     0x42b9 Output/ble_app_template_pca10056_s140 Release/Obj/id_manager.o
+ .debug_info    0x000000000005dca1     0x2f80 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_gatt.o
+ .debug_info    0x0000000000060c21     0x264c Output/ble_app_template_pca10056_s140 Release/Obj/nrf_ble_qwr.o
+ .debug_info    0x000000000006326d     0x2819 Output/ble_app_template_pca10056_s140 Release/Obj/peer_data_storage.o
+ .debug_info    0x0000000000065a86     0x236b Output/ble_app_template_pca10056_s140 Release/Obj/peer_database.o
+ .debug_info    0x0000000000067df1      0xcb3 Output/ble_app_template_pca10056_s140 Release/Obj/peer_id.o
+ .debug_info    0x0000000000068aa4     0x4a46 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager.o
+ .debug_info    0x000000000006d4ea     0x32f5 Output/ble_app_template_pca10056_s140 Release/Obj/peer_manager_handler.o
+ .debug_info    0x00000000000707df      0xac8 Output/ble_app_template_pca10056_s140 Release/Obj/pm_buffer.o
+ .debug_info    0x00000000000712a7     0x47eb Output/ble_app_template_pca10056_s140 Release/Obj/security_dispatcher.o
+ .debug_info    0x0000000000075a92     0x368d Output/ble_app_template_pca10056_s140 Release/Obj/security_manager.o
+ .debug_info    0x000000000007911f     0x1860 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh.o
+ .debug_info    0x000000000007a97f     0x3289 Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_ble.o
+ .debug_info    0x000000000007dc08      0xc3e Output/ble_app_template_pca10056_s140 Release/Obj/nrf_sdh_soc.o
+ .debug_info    0x000000000007e846     0x2ac4 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_calibration.o
+ .debug_info    0x000000000008130a     0x3ae1 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_core.o
+ .debug_info    0x0000000000084deb     0x1155 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api_strings.o
+ .debug_info    0x0000000000085f40     0x5ab0 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_api.o
+ .debug_info    0x000000000008b9f0     0x20a3 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_i2c_platform.o
+ .debug_info    0x000000000008da93     0x1384 Output/ble_app_template_pca10056_s140 Release/Obj/vl53l0x_platform.o
 
 .debug_abbrev   0x0000000000000000    0x10fa5
  .debug_abbrev  0x0000000000000000       0x12 Output/ble_app_template_pca10056_s140 Release/Obj/thumb_crt0.o

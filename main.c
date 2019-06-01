@@ -771,7 +771,6 @@ int main(void)
     peer_manager_init();
     // Start execution.
     NRF_LOG_INFO("OpenTrapLaser Started!.");
- 
     nrf_delay_ms(300);  //give time for the rangefinder to finish initializing before trying to get data from it.
     advertising_start(erase_bonds);
     // Enter main loop.
