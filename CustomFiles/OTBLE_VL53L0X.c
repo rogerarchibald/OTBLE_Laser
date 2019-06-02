@@ -50,7 +50,12 @@ bool isMeasurementReady(void){
 
 //function that can be called from my app to start measurments being taken.
 void startMeasuring(void){
+uint8_t holderVar = 0;
+                NRF_LOG_INFO("mode starts as: %d\r\n", holderVar);
     	VL53L0X_StartMeasurement(pMyDevice);
+        VL53L0X_GetDeviceMode(pMyDevice, &holderVar);
+         NRF_LOG_INFO("mode ends as: %d\r\n", holderVar);
+
         }
 //function that can be called from my app to stop measurments being taken.
 void stopMeasuring(void){
@@ -114,9 +119,11 @@ void initVL53(void){
 				print_pal_error(err_code);
 			}
 
-			VL53L0X_SetDeviceMode(pMyDevice, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING); //setting this up for continuous ranging, will use the long timing budget to space out measurements and use the interrupt genereated to trigger gpiote to get measurement.
+     
+                VL53L0X_SetInterMeasurementPeriodMilliSeconds(pMyDevice, 250);    //set 1/4 second between samples  
+                VL53L0X_SetDeviceMode(pMyDevice, VL53L0X_DEVICEMODE_CONTINUOUS_TIMED_RANGING); //setting this up for continuous timed ranging with inter-measurment period as defined above.
 
-
+                 err_code = 0;
               //following are setting up for hi-accuracy as per user manual...may look at changing the timing budget for power considerations moving forward
 
 		if (err_code == VL53L0X_ERROR_NONE) {
@@ -130,11 +137,14 @@ void initVL53(void){
 					VL53L0X_CHECKENABLE_SIGMA_FINAL_RANGE,
 					(FixPoint1616_t) (18 * 65536));
 		}
+                //setting a timing budget of 60mS (may revisit this after testing in all ambient light conditions)
 
 		if (err_code == VL53L0X_ERROR_NONE) {
 			err_code = VL53L0X_SetMeasurementTimingBudgetMicroSeconds(pMyDevice,
-					200000);
+					60000);
 		}
+ 
+
 
     } else {
     	NRF_LOG_ERROR("Data Init Failed\r\n");

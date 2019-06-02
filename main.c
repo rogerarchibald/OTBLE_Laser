@@ -163,7 +163,6 @@ void in_pin_handler(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 static uint16_t lastValue = 0;  //will store the last distance value recorded here to know if we've changed by more than our threshold
 uint16_t thisValue;
 uint16_t valToSend;  //this is what will actually push for the characteristic value update....Need to set the MSBit of the 16-bit value as this is a flag to the app that we're looking at the laser version
-
 getRangeClearFlag();
 
 if(rangingData.RangeStatus){ //status == 0 when all is well
@@ -547,6 +546,9 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             m_opentrap_service.conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
             err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_opentrap_service.conn_handle);
             APP_ERROR_CHECK(err_code);
+            //Set the TX power to max for larger range
+            err_code = sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_CONN,m_opentrap_service.conn_handle,8);
+            APP_ERROR_CHECK(err_code);
             break;
 
           //if the app is writing a characteristic value for setting trap or controlling LED.
@@ -753,7 +755,6 @@ static void advertising_start(bool erase_bonds)
 int main(void)
 {
     bool erase_bonds = false;
-
     // Initialize.
     log_init();
     initVL53();
