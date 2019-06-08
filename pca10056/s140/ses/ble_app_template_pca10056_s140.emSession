@@ -1,9 +1,7 @@
 <!DOCTYPE CrossStudio_Session_File>
 <session>
  <Bookmarks/>
- <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="776" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../main.c" useHWbreakpoint="false"/>
- </Breakpoints>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
   <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
@@ -27,6 +25,7 @@
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;None"/>
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;nRF_Drivers"/>
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;nRF_Libraries"/>
+  <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;nRF_Log"/>
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;nRF_SoftDevice"/>
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;Segger Startup Files"/>
   <ProjectSessionItem path="ble_app_template_pca10056_s140;ble_app_template_pca10056_s140;VL53_API_Files"/>
@@ -67,21 +66,30 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="757" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="738" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="164" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="157" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="8" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OpenTrap.h" selected="0" top="18" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="10" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_GPIO.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_GPIO.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="56" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_gpiote.h" selected="0" top="41" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="63" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_VL53L0X.c" selected="0" top="38" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2363" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/src/vl53l0x_api.c" selected="0" top="2324" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="342" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_def.h" selected="0" top="309" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="145" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_VL53L0X.c" selected="0" top="107" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="994" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/src/vl53l0x_api.c" selected="0" top="956" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="182" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/inc/vl53l0x_def.h" selected="0" top="159" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="45" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OpenTrap.c" selected="0" top="14" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="744" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_gpio.h" selected="0" top="689" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="72" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_pwm.h" selected="0" top="33" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="85" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_GPIO.c" selected="1" top="135" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="174" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/OTBLE_GPIO.c" selected="0" top="149" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="103" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_pwm.h" selected="0" top="78" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="287" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_pwm.c" selected="0" top="241" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="658" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_pwm.h" selected="0" top="608" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="26" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="12" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="160" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_pwm.h" selected="0" top="131" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="26" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="12" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="167" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble_gap.h" selected="0" top="141" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="67" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="182" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/platform/src/vl53l0x_platform.c" selected="0" top="151" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="303" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/platform/src/vl53l0x_i2c_platform.c" selected="0" top="284" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="537" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" selected="0" top="516" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="613" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_twi.c" selected="0" top="581" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="784" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/src/vl53l0x_api_calibration.c" selected="0" top="773" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="447" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/src/nrf_log_frontend.c" selected="0" top="397" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1242" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../CustomFiles/nrf51-vl53l0x-driver/core/src/vl53l0x_api_core.c" selected="0" top="1224" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="ble_app_template_pca10056_s140" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/Users/Roger/NRF_SDK/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

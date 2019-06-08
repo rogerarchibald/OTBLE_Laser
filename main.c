@@ -510,6 +510,8 @@ static void on_adv_evt(ble_adv_evt_t ble_adv_evt)
 
         case BLE_ADV_EVT_IDLE:
             setRGB(red);  //turn light red to indicate we've given up/gone to sleep...reset to keep going
+            nrf_delay_ms(2000); //2 seconds after giving up on advertising, shut down the board.
+               nrf_gpio_pin_clear(powerON);
             sleep_mode_enter();
             break;
 

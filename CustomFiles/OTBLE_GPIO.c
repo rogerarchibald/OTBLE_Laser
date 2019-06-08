@@ -23,7 +23,7 @@ Will also run the PWM for driving the solenoid/boost from here just since this i
 /*following I/O are defined in OTBLE_GPIO.h:
 intPin NRF_GPIO_PIN_MAP(1,14) //this is the interrupt pin from teh rangefinder saying that a conversion is complete.
 vlShutDwn NRF_GPIO_PIN_MAP(1,13)  //likely will not use this shutdown pin...will software shut-down.
-TP2 NRF_GPIO_PIN_MAP(0,28)
+powerON NRF_GPIO_PIN_MAP(0,28)
 TP1 NRF_GPIO_PIN_MAP(0,31)
 SOL_SNS NRF_GPIO_PIN_MAP(0,30) //pin to be configured as input...will be hi if no solenoid is present, otherwise will be low.
 HP_LED NRF_GPIO_PIN_MAP(1,12)
@@ -44,7 +44,8 @@ void initIO(void){
     ret_code_t err_code;
     nrf_gpio_range_cfg_output(22,24); //config the RGB LED as outputs
     nrf_gpio_cfg_output(TP1);
-    nrf_gpio_cfg_output(TP2);
+    nrf_gpio_cfg_output(powerON); 
+    nrf_gpio_pin_set(powerON);  //this will keep the chip powered up until a reset or until it's pulled low after advertising timeout
    nrf_gpio_pin_set(vlShutDwn);
     nrf_gpio_cfg_output(vlShutDwn);
 //set up HP LED:
@@ -177,25 +178,18 @@ void togTP1(void){
 nrf_gpio_pin_toggle(TP1);
 }
 
-void togTP2(void){
-nrf_gpio_pin_toggle(TP2);
-}
 
 void setTP1(void){
 nrf_gpio_pin_set(TP1);
 }
 
-void setTP2(void){
-nrf_gpio_pin_set(TP2);
-}
+
 
 void clearTP1(void){
 nrf_gpio_pin_clear(TP1);
 }
 
-void clearTP2(void){
-nrf_gpio_pin_clear(TP2);
-}
+
 
 //function to control power LED on board:
 void powerLED(uint8_t lightVal){
