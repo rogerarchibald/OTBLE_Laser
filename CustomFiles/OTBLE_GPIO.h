@@ -30,6 +30,7 @@ void clearTP1(void);
 void powerLED(uint8_t lightVal);
 void fireSolenoid(void);
 void PWM_INIT(void);
+void holdPowerOn(void);
 
 enum Colors{
 red = (1 << 22),

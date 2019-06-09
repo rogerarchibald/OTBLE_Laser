@@ -35,6 +35,11 @@ BST_DRV NRF_GPIO_PIN_MAP(0,26)
 static nrf_drv_pwm_t m_pwm0 = NRF_DRV_PWM_INSTANCE(0);  //instance of 
 
 
+//this is separated from the general IO init because I want to drive this hi ASAP otherwise the board can brown out after a quick button press.
+void holdPowerOn(void){
+    nrf_gpio_cfg_output(powerON); 
+    nrf_gpio_pin_set(powerON);  //this will keep the chip powered up until a reset or until it's pulled low after advertising timeout
+    }
 
 
 
@@ -44,8 +49,6 @@ void initIO(void){
     ret_code_t err_code;
     nrf_gpio_range_cfg_output(22,24); //config the RGB LED as outputs
     nrf_gpio_cfg_output(TP1);
-    nrf_gpio_cfg_output(powerON); 
-    nrf_gpio_pin_set(powerON);  //this will keep the chip powered up until a reset or until it's pulled low after advertising timeout
    nrf_gpio_pin_set(vlShutDwn);
     nrf_gpio_cfg_output(vlShutDwn);
 //set up HP LED:

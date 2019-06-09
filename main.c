@@ -758,6 +758,7 @@ int main(void)
 {
     bool erase_bonds = false;
     // Initialize.
+    holdPowerOn();  //keep the power line enabled
     log_init();
     initVL53();
     initIO();  //call function to initialize hte RGB LED and other I/O.
